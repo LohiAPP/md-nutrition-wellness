@@ -21,7 +21,7 @@ import g1 from "@/assets/gallery-1.jpg";
 import g2 from "@/assets/gallery-2.jpg";
 import g3 from "@/assets/gallery-3.jpg";
 import g4 from "@/assets/gallery-4.jpg";
-import { BRAND, FAQS, SERVICES, STORIES, SPECIALISED, SUPPORT_PILLARS } from "@/lib/site-data";
+import { BRAND, FAQS, SERVICES, STORIES } from "@/lib/site-data";
 import { FinalCTA } from "@/components/site/CTA";
 
 export const Route = createFileRoute("/")({
