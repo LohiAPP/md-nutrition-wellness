@@ -271,6 +271,66 @@ function Home() {
       </section>
 
       {/* HOW IT WORKS */}
+      {/* SPECIALISED SUPPORT */}
+      <section className="relative overflow-hidden bg-gradient-to-b from-[color:var(--brand-ivory)] to-white py-20">
+        <div aria-hidden className="pointer-events-none absolute -top-10 left-1/2 h-40 w-[120%] -translate-x-1/2 rounded-[50%] bg-green/10 blur-3xl" />
+        <div className="mx-auto max-w-7xl px-5 sm:px-8">
+          <div className="mx-auto max-w-3xl text-center">
+            <p className="text-sm font-semibold uppercase tracking-[0.22em] text-accent">Specialised Support For</p>
+            <h2 className="mt-3 font-display text-3xl font-extrabold leading-tight text-charcoal sm:text-4xl lg:text-5xl">
+              <span className="text-gradient-brand">Personalized Guidance.</span> Proven Results. Better Health.
+            </h2>
+          </div>
+
+          <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+            {[
+              { icon: Droplet, title: "Sugar Control", desc: "Balanced blood sugar levels for more energy, better health and a happier life." },
+              { icon: HeartPulse, title: "Blood Pressure Balance", desc: "Maintain healthy blood pressure levels and improve heart health naturally." },
+              { icon: ShieldCheck, title: "Cholesterol Management", desc: "Improve cholesterol levels, support heart health and reduce health risks." },
+              { icon: Sparkles, title: "Complete Wellness & Weight Management", desc: "Holistic care for your body and mind to achieve lasting wellness and healthy weight." },
+            ].map((c, i) => (
+              <div
+                key={c.title}
+                style={{ animationDelay: `${i * 90}ms` }}
+                className="card-hover animate-rise group relative flex flex-col items-center rounded-3xl border border-border bg-white p-7 text-center shadow-soft"
+              >
+                <div className="grid h-16 w-16 place-items-center rounded-full bg-gradient-to-br from-primary to-accent text-white shadow-lift transition-transform group-hover:scale-110">
+                  <c.icon className="h-8 w-8" />
+                </div>
+                <h3 className="mt-5 font-display text-base font-bold uppercase tracking-wide text-charcoal">{c.title}</h3>
+                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{c.desc}</p>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-12 flex flex-col items-center gap-5 rounded-3xl bg-charcoal p-6 text-center shadow-lift sm:flex-row sm:justify-between sm:p-8 sm:text-left">
+            <div className="flex items-center gap-4">
+              <div className="grid h-14 w-14 shrink-0 place-items-center rounded-full bg-white/10 text-accent">
+                <HeartPulse className="h-7 w-7" />
+              </div>
+              <div>
+                <p className="font-display text-lg font-bold text-white sm:text-xl">Your Health Is Our Priority.</p>
+                <p className="text-sm text-[color:var(--brand-ivory)]/90 italic">We're Here to Support You!</p>
+              </div>
+            </div>
+            <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
+              {[
+                { icon: Leaf, label: "Personalized Plans" },
+                { icon: Target, label: "Expert Guidance" },
+                { icon: TrendingUp, label: "Proven Results" },
+                { icon: Users, label: "Ongoing Support" },
+              ].map((p) => (
+                <div key={p.label} className="flex items-center gap-2 rounded-full bg-white/5 px-3 py-2 text-xs font-semibold text-white">
+                  <p.icon className="h-4 w-4 text-accent" />
+                  <span>{p.label}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* HOW IT WORKS */}
       <section className="bg-charcoal py-20 text-white">
         <div className="mx-auto max-w-7xl px-5 sm:px-8">
           <div className="max-w-2xl">
