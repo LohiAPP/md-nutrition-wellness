@@ -21,6 +21,11 @@ import g1 from "@/assets/gallery-1.jpg";
 import g2 from "@/assets/gallery-2.jpg";
 import g3 from "@/assets/gallery-3.jpg";
 import g4 from "@/assets/gallery-4.jpg";
+import specSugar from "@/assets/spec-sugar.jpg";
+import specBp from "@/assets/spec-bp.jpg";
+import specChol from "@/assets/spec-cholesterol.jpg";
+import specWellness from "@/assets/spec-wellness.jpg";
+import founderAsset from "@/assets/mohammed-mujeeb.jpg.asset.json";
 import { BRAND, FAQS, SERVICES, STORIES } from "@/lib/site-data";
 import { FinalCTA } from "@/components/site/CTA";
 
