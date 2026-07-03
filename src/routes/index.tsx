@@ -82,15 +82,18 @@ function Home() {
     <>
       {/* HERO */}
       <section className="relative overflow-hidden bg-gradient-hero">
+        {/* animated blobs */}
+        <div aria-hidden className="pointer-events-none absolute -top-24 -left-20 h-72 w-72 rounded-full bg-teal/25 animate-blob" />
+        <div aria-hidden className="pointer-events-none absolute -bottom-24 right-0 h-80 w-80 rounded-full bg-green/20 animate-blob" style={{ animationDelay: "-6s" }} />
         <div className="mx-auto grid max-w-7xl gap-14 px-5 pb-20 pt-14 sm:px-8 sm:pt-20 lg:grid-cols-[1.05fr_1fr] lg:items-center lg:gap-16 lg:pb-28 lg:pt-24">
-          <div className="max-w-2xl">
+          <div className="max-w-2xl animate-rise">
             <span className="inline-flex items-center gap-2 rounded-full border border-teal/25 bg-white/70 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-primary">
               <Sparkles className="h-3.5 w-3.5" /> Nutrition · Wellness · Coaching
             </span>
             <h1 className="mt-5 font-display text-4xl font-extrabold leading-[1.05] text-charcoal sm:text-5xl lg:text-6xl">
               Strong Body.<br />
               Sharp Mind.<br />
-              <span className="text-primary">Smart Nutrition.</span>
+              <span className="text-gradient-brand">Smart Nutrition.</span>
             </h1>
             <p className="mt-6 max-w-xl text-base text-muted-foreground sm:text-lg">
               Personalized nutrition guidance and wellness coaching to help you achieve
@@ -100,7 +103,7 @@ function Home() {
             <div className="mt-8 flex flex-wrap items-center gap-3">
               <Link
                 to="/contact"
-                className="inline-flex items-center gap-2 rounded-full bg-gradient-cta px-6 py-3.5 text-sm font-semibold text-white shadow-lift transition-transform hover:-translate-y-0.5"
+                className="inline-flex items-center gap-2 rounded-full bg-gradient-cta px-6 py-3.5 text-sm font-semibold text-white shadow-lift transition-transform hover:-translate-y-0.5 animate-pulse-ring"
               >
                 Book Free Health Assessment <ArrowRight className="h-4 w-4" />
               </Link>
@@ -121,7 +124,7 @@ function Home() {
             </ul>
           </div>
 
-          <div className="relative">
+          <div className="relative animate-float">
             <div className="absolute -inset-6 -z-10 rounded-[2.5rem] bg-white/40 blur-2xl" />
             <div className="relative overflow-hidden rounded-[2rem] border border-white/60 bg-white shadow-lift">
               <img
@@ -204,16 +207,30 @@ function Home() {
           </div>
 
           <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-            {SERVICES.slice(0, 8).map((s) => (
+            {SERVICES.slice(0, 8).map((s, i) => (
               <div
                 key={s.slug}
-                className="group flex h-full flex-col rounded-2xl border border-border bg-white p-6 shadow-soft transition-all hover:-translate-y-1 hover:shadow-lift"
+                style={{ animationDelay: `${i * 70}ms` }}
+                className="group card-hover animate-rise flex h-full flex-col overflow-hidden rounded-2xl border border-border bg-white shadow-soft"
               >
-                <div className="grid h-12 w-12 place-items-center rounded-xl bg-ivory text-primary transition-colors group-hover:bg-primary group-hover:text-white">
-                  <s.icon className="h-6 w-6" />
+                <div className="relative aspect-[4/3] overflow-hidden">
+                  <img
+                    src={s.image}
+                    alt={s.title}
+                    width={800}
+                    height={600}
+                    loading="lazy"
+                    className="h-full w-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-charcoal/50 to-transparent" />
+                  <div className="absolute left-3 top-3 grid h-10 w-10 place-items-center rounded-xl bg-white/95 text-primary shadow-soft">
+                    <s.icon className="h-5 w-5" />
+                  </div>
                 </div>
-                <h3 className="mt-5 font-display text-lg font-bold">{s.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{s.description}</p>
+                <div className="flex flex-1 flex-col p-5">
+                  <h3 className="font-display text-base font-bold">{s.title}</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{s.description}</p>
+                </div>
               </div>
             ))}
           </div>
