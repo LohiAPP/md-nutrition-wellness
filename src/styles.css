@@ -249,6 +249,14 @@
   object-fit: contain;
 }
 
+@utility hide-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .animate-float, .animate-blob, .animate-rise, .animate-marquee,
   .animate-pulse-ring, .text-gradient-brand { animation: none !important; }

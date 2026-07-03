@@ -27,7 +27,7 @@ const ITEMS: { src: string; caption: string; span?: string }[] = [
   { src: g1, caption: "Healthy meal plating", span: "sm:col-span-2 sm:row-span-2" },
   { src: g2, caption: "Nutrition consultation" },
   { src: g3, caption: "Fresh green smoothies" },
-  { src: g4, caption: "Active lifestyle sessions" },
+
   { src: g5, caption: "Whole-food ingredients", span: "sm:col-span-2" },
   { src: g6, caption: "Wellness group events" },
 ];

@@ -15,6 +15,7 @@ import {
   Leaf,
   TrendingUp,
   Users,
+  CheckCircle2,
 } from "lucide-react";
 import hero from "@/assets/hero-nutrition.jpg";
 import g1 from "@/assets/gallery-1.jpg";
@@ -28,7 +29,8 @@ import specWellness from "@/assets/spec-wellness.jpg";
 import founderAsset from "@/assets/mohammed-mujeeb.jpg.asset.json";
 import { BRAND, FAQS, SERVICES, STORIES } from "@/lib/site-data";
 import { ContactModal } from "@/components/site/ContactModal";
-import { useState } from "react";
+import { ConsultationForm } from "@/components/site/ConsultationForm";
+import { useState, useRef } from "react";
 import { FinalCTA } from "@/components/site/CTA";
 
 export const Route = createFileRoute("/")({
@@ -92,76 +94,67 @@ const WHY = [
 
 function Home() {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const carouselRef = useRef<HTMLDivElement>(null);
+
+  const scrollCarousel = (direction: "left" | "right") => {
+    if (carouselRef.current) {
+      const scrollAmount = 340;
+      carouselRef.current.scrollBy({ left: direction === "left" ? -scrollAmount : scrollAmount, behavior: "smooth" });
+    }
+  };
 
   return (
     <>
       <ContactModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
       {/* HERO */}
-      <section className="relative overflow-hidden bg-gradient-hero">
+      <section className="relative overflow-hidden bg-ivory/40">
         {/* animated blobs */}
-        <div aria-hidden className="pointer-events-none absolute -top-24 -left-20 h-72 w-72 rounded-full bg-teal/25 animate-blob" />
-        <div aria-hidden className="pointer-events-none absolute -bottom-24 right-0 h-80 w-80 rounded-full bg-green/20 animate-blob" style={{ animationDelay: "-6s" }} />
-        <div className="mx-auto grid max-w-7xl gap-14 px-5 pb-20 pt-14 sm:px-8 sm:pt-20 lg:grid-cols-[1.05fr_1fr] lg:items-center lg:gap-16 lg:pb-28 lg:pt-24">
-          <div className="max-w-2xl animate-rise">
-            <span className="inline-flex items-center gap-2 rounded-full border border-teal/25 bg-white/70 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-primary">
-              <Sparkles className="h-3.5 w-3.5" /> Nutrition · Wellness · Coaching
-            </span>
-            <h1 className="mt-5 font-display text-4xl font-extrabold leading-[1.05] text-charcoal sm:text-5xl lg:text-6xl">
-              Strong Body.<br />
-              Sharp Mind.<br />
-              <span className="text-gradient-brand">Smart Nutrition.</span>
-            </h1>
-            <p className="mt-6 max-w-xl text-base text-muted-foreground sm:text-lg">
-              Personalized nutrition guidance and wellness coaching to help you achieve
-              sustainable health, better energy, and a confident lifestyle.
-            </p>
+        <div aria-hidden className="pointer-events-none absolute -top-24 -left-20 h-72 w-72 rounded-full bg-teal/20 animate-blob" />
+        <div aria-hidden className="pointer-events-none absolute -bottom-24 right-0 h-80 w-80 rounded-full bg-green/15 animate-blob" style={{ animationDelay: "-6s" }} />
+        
+        <div className="mx-auto max-w-7xl px-5 sm:px-8 text-center relative z-10 pt-8 pb-4 animate-rise">
+          <h2 className="font-display text-2xl sm:text-3xl lg:text-4xl font-extrabold text-charcoal">
+            80% Nutrition. 20% Exercise. <span className="text-[#067100]">100% Mindset.</span>
+          </h2>
+          <p className="mt-3 text-sm sm:text-base text-muted-foreground max-w-2xl mx-auto">
+            Transform your health with the perfect balance. Let's achieve your goals together!
+          </p>
+        </div>
 
-            <div className="mt-8 flex flex-wrap items-center gap-3">
-              <button
-                onClick={() => setIsModalOpen(true)}
-                className="inline-flex items-center gap-2 rounded-full bg-gradient-cta px-6 py-3.5 text-sm font-semibold text-white shadow-lift transition-transform hover:-translate-y-0.5 animate-pulse-ring"
-              >
-                Book Free Health Assessment <ArrowRight className="h-4 w-4" />
-              </button>
-              <Link
-                to="/services"
-                className="inline-flex items-center gap-2 rounded-full border border-charcoal/15 bg-white px-6 py-3.5 text-sm font-semibold text-charcoal transition-colors hover:border-primary hover:text-primary"
-              >
-                Explore Services
-              </Link>
-            </div>
-
-            <ul className="mt-8 flex flex-wrap gap-x-6 gap-y-2 text-sm text-charcoal/80">
-              {TRUST.map((t) => (
-                <li key={t} className="inline-flex items-center gap-2">
-                  <BadgeCheck className="h-4 w-4 text-accent" /> {t}
-                </li>
-              ))}
-            </ul>
+        <div className="mx-auto grid max-w-7xl gap-8 px-5 pb-16 pt-6 sm:px-8 sm:pt-8 lg:grid-cols-[1fr_1.1fr] lg:items-stretch lg:gap-12 lg:pb-24 relative z-10">
+          
+          {/* Left Column: Founder Image */}
+          <div className="relative overflow-hidden rounded-[2rem] bg-white shadow-soft image-card w-full hidden lg:block h-full min-h-[600px]">
+            <img
+              src="/founder.jpeg"
+              alt="Mohammed Mujeeb - MD Nutrition Centre"
+              loading="lazy"
+              className="absolute inset-0 w-full h-full object-cover"
+            />
           </div>
 
-          <div className="relative animate-float">
-            <div className="absolute -inset-6 -z-10 rounded-[2.5rem] bg-white/40 blur-2xl" />
-            <div className="relative overflow-hidden rounded-[2rem] border border-white/60 bg-white shadow-lift image-card">
-              <img
-                src="/hero_sectrion.jpeg"
-                alt="A wellness client enjoying a colourful, nutritious meal"
-                loading="lazy"
-              />
+          {/* Right Column: Heading + Form Card */}
+          <div className="flex flex-col animate-rise bg-white rounded-[2rem] p-5 sm:p-6 shadow-soft border border-white/60">
+            <span className="inline-flex self-start items-center gap-1.5 rounded-full border border-teal/25 bg-green-50 px-3 py-1 text-[10px] sm:text-xs font-semibold uppercase tracking-[0.18em] text-[#067100]">
+              <Sparkles className="h-3 w-3" /> FREE CONSULTATION
+            </span>
+            <h1 className="mt-3 font-display text-xl font-extrabold leading-[1.2] text-charcoal sm:text-2xl lg:text-3xl">
+              Get FREE Consultation – Fill the form below for personalized one-to-one guidance
+            </h1>
+            
+            <div className="mt-4 flex-1 h-auto min-h-[400px]">
+               <ConsultationForm isPopup={false} />
             </div>
-
-            <div className="absolute -left-4 bottom-6 hidden max-w-[240px] rounded-2xl bg-white p-4 shadow-soft sm:block">
-              <p className="text-xs font-semibold uppercase tracking-widest text-primary">Real Results</p>
-              <p className="mt-1 text-sm font-medium text-charcoal">
-                “Lost 12 kg in 6 months without any crash diet.”
-              </p>
-              <p className="mt-2 text-xs text-muted-foreground">— Priya, weight management client</p>
-            </div>
-
-            <div className="absolute -right-3 top-6 hidden rounded-2xl bg-charcoal p-4 text-white shadow-lift sm:block">
-              <p className="text-2xl font-bold">1,200+</p>
-              <p className="text-xs text-white/70">Lives coached</p>
-            </div>
+          </div>
+          
+          {/* Mobile Image */}
+          <div className="relative overflow-hidden rounded-[2rem] bg-white shadow-soft image-card w-full block lg:hidden h-[400px]">
+            <img
+              src="/founder.jpeg"
+              alt="Mohammed Mujeeb - MD Nutrition Centre"
+              loading="lazy"
+              className="absolute inset-0 w-full h-full object-cover"
+            />
           </div>
         </div>
       </section>
@@ -203,7 +196,7 @@ function Home() {
       </section>
 
       {/* FOUNDER */}
-      <section className="relative overflow-hidden bg-charcoal py-20 text-white">
+      <section className="relative overflow-hidden bg-[#054020] py-20 text-white">
         <div aria-hidden className="pointer-events-none absolute -left-24 top-1/4 h-72 w-72 rounded-full bg-primary/20 blur-3xl animate-blob" />
         <div aria-hidden className="pointer-events-none absolute -right-24 bottom-0 h-80 w-80 rounded-full bg-accent/15 blur-3xl animate-blob" style={{ animationDelay: "-5s" }} />
         <div className="mx-auto grid max-w-7xl gap-12 px-5 sm:px-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
@@ -265,6 +258,56 @@ function Home() {
               className="mt-8 inline-flex items-center gap-2 rounded-full bg-gradient-cta px-6 py-3.5 text-sm font-semibold text-white shadow-lift transition-transform hover:-translate-y-0.5"
             >
               Book Free Consultation <ArrowRight className="h-4 w-4" />
+            </button>
+          </div>
+        </div>
+      </section>
+
+      {/* TESTIMONIALS (IMAGES) */}
+      <section className="bg-ivory py-20 overflow-hidden">
+        <div className="mx-auto max-w-7xl px-5 sm:px-8 text-center">
+          <h2 className="font-display text-3xl font-bold sm:text-4xl text-charcoal">
+            Real People. Real Results.
+          </h2>
+          <p className="mt-3 text-muted-foreground">
+            See real progress shared by the MD Nutrition Centre community.
+          </p>
+        </div>
+
+        <div className="mt-12 relative max-w-7xl mx-auto">
+          <div 
+            ref={carouselRef}
+            className="flex gap-6 overflow-x-auto snap-x snap-mandatory hide-scrollbar pb-8 px-5 sm:px-8"
+          >
+            {[2, 3, 4, 5, 6, 7].map((num) => (
+              <div key={num} className="snap-center shrink-0 w-[280px] sm:w-[320px] rounded-2xl bg-white shadow-soft p-3 flex flex-col items-center justify-center border border-border">
+                <img 
+                  src={`/testimonial (${num}).jpeg`} 
+                  alt="Client Testimonial" 
+                  className="w-full h-auto max-h-[380px] object-contain rounded-xl" 
+                  loading="lazy" 
+                />
+              </div>
+            ))}
+          </div>
+          
+          <div className="flex items-center justify-center gap-6 mt-2">
+            <button 
+              onClick={() => scrollCarousel('left')} 
+              className="inline-flex items-center gap-2 rounded-full border border-border px-5 py-2.5 text-sm font-semibold text-charcoal hover:bg-white transition-colors shadow-sm"
+            >
+              <ChevronDown className="h-4 w-4 rotate-90" /> Previous
+            </button>
+            <div className="flex gap-1.5 hidden sm:flex">
+              {[...Array(6)].map((_, i) => (
+                <div key={i} className={`h-2 w-2 rounded-full ${i === 0 ? 'w-6 bg-accent' : 'bg-border'}`} />
+              ))}
+            </div>
+            <button 
+              onClick={() => scrollCarousel('right')} 
+              className="inline-flex items-center gap-2 rounded-full border border-accent px-5 py-2.5 text-sm font-semibold text-accent hover:bg-accent/5 transition-colors shadow-sm"
+            >
+              Next <ChevronDown className="h-4 w-4 -rotate-90" />
             </button>
           </div>
         </div>
