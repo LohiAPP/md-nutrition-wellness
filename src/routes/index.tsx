@@ -27,6 +27,8 @@ import specChol from "@/assets/spec-cholesterol.jpg";
 import specWellness from "@/assets/spec-wellness.jpg";
 import founderAsset from "@/assets/mohammed-mujeeb.jpg.asset.json";
 import { BRAND, FAQS, SERVICES, STORIES } from "@/lib/site-data";
+import { ContactModal } from "@/components/site/ContactModal";
+import { useState } from "react";
 import { FinalCTA } from "@/components/site/CTA";
 
 export const Route = createFileRoute("/")({
@@ -89,8 +91,11 @@ const WHY = [
 ];
 
 function Home() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   return (
     <>
+      <ContactModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
       {/* HERO */}
       <section className="relative overflow-hidden bg-gradient-hero">
         {/* animated blobs */}
@@ -112,12 +117,12 @@ function Home() {
             </p>
 
             <div className="mt-8 flex flex-wrap items-center gap-3">
-              <Link
-                to="/contact"
+              <button
+                onClick={() => setIsModalOpen(true)}
                 className="inline-flex items-center gap-2 rounded-full bg-gradient-cta px-6 py-3.5 text-sm font-semibold text-white shadow-lift transition-transform hover:-translate-y-0.5 animate-pulse-ring"
               >
                 Book Free Health Assessment <ArrowRight className="h-4 w-4" />
-              </Link>
+              </button>
               <Link
                 to="/services"
                 className="inline-flex items-center gap-2 rounded-full border border-charcoal/15 bg-white px-6 py-3.5 text-sm font-semibold text-charcoal transition-colors hover:border-primary hover:text-primary"
@@ -137,13 +142,11 @@ function Home() {
 
           <div className="relative animate-float">
             <div className="absolute -inset-6 -z-10 rounded-[2.5rem] bg-white/40 blur-2xl" />
-            <div className="relative overflow-hidden rounded-[2rem] border border-white/60 bg-white shadow-lift">
+            <div className="relative overflow-hidden rounded-[2rem] border border-white/60 bg-white shadow-lift image-card">
               <img
-                src={hero}
+                src="/hero_sectrion.jpeg"
                 alt="A wellness client enjoying a colourful, nutritious meal"
-                width={1280}
-                height={1408}
-                className="h-full w-full object-cover"
+                loading="lazy"
               />
             </div>
 
@@ -206,14 +209,11 @@ function Home() {
         <div className="mx-auto grid max-w-7xl gap-12 px-5 sm:px-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
           <div className="relative order-2 lg:order-1">
             <div className="absolute -inset-4 -z-10 rounded-[2.5rem] bg-gradient-to-br from-primary/40 to-accent/30 blur-2xl" />
-            <div className="relative mx-auto max-w-md overflow-hidden rounded-[2rem] border-4 border-white/10 bg-gradient-to-b from-white/5 to-transparent shadow-lift">
+            <div className="relative mx-auto max-w-md overflow-hidden rounded-[2rem] border-4 border-white/10 bg-gradient-to-b from-white/5 to-transparent shadow-lift image-card">
               <img
-                src={founderAsset.url}
+                src="/founder.jpeg"
                 alt="Mohammed Mujeeb — Senior Wellness Coach & Founder of MD Nutrition Centre"
-                width={768}
-                height={1024}
                 loading="lazy"
-                className="h-full w-full object-cover"
               />
             </div>
             <div className="absolute -bottom-4 left-1/2 hidden -translate-x-1/2 rounded-2xl bg-white px-5 py-3 text-center shadow-lift sm:block">
@@ -226,7 +226,7 @@ function Home() {
             <span className="inline-flex items-center gap-2 rounded-full border border-accent/30 bg-white/5 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-accent">
               <Sparkles className="h-3.5 w-3.5" /> Meet the Founder
             </span>
-            <h2 className="mt-5 font-display text-4xl font-extrabold leading-tight sm:text-5xl">
+            <h2 className="mt-5 font-display text-4xl font-extrabold leading-tight text-white sm:text-5xl">
               Transform Your Health.<br />
               <span className="text-gradient-brand">Transform Your Life.</span>
             </h2>
@@ -260,12 +260,12 @@ function Home() {
               ))}
             </div>
 
-            <Link
-              to="/contact"
+            <button
+              onClick={() => setIsModalOpen(true)}
               className="mt-8 inline-flex items-center gap-2 rounded-full bg-gradient-cta px-6 py-3.5 text-sm font-semibold text-white shadow-lift transition-transform hover:-translate-y-0.5"
             >
               Book Free Consultation <ArrowRight className="h-4 w-4" />
-            </Link>
+            </button>
           </div>
         </div>
       </section>

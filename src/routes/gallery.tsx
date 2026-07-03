@@ -48,23 +48,58 @@ function Gallery() {
       </section>
 
       <section className="mx-auto max-w-7xl px-5 py-16 sm:px-8">
-        <div className="grid auto-rows-[220px] grid-cols-2 gap-4 sm:grid-cols-4">
+        <div className="text-center mb-12">
+          <p className="text-sm font-semibold uppercase tracking-[0.22em] text-accent">Programs</p>
+          <h2 className="mt-3 font-display text-3xl font-bold sm:text-4xl text-charcoal">
+            Our Wellness & Nutrition Programs
+          </h2>
+        </div>
+        
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {[
+            { src: "/image1.jpeg", alt: "Weight Management" },
+            { src: "/image2.jpeg", alt: "Lifestyle Coaching" },
+            { src: "/image3.jpeg", alt: "Chronic Conditions" },
+            { src: "/image4.png", alt: "Health Transformation" },
+            { src: "/image5.jpeg", alt: "Wellness Experts" }
+          ].map((item, i) => (
+            <div key={i} className="overflow-hidden rounded-3xl border border-border bg-white shadow-soft group image-card flex items-center justify-center p-2">
+              <img
+                src={item.src}
+                alt={item.alt}
+                loading="lazy"
+                className="w-full h-auto transition-transform duration-500 group-hover:scale-105"
+              />
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="bg-ivory py-16">
+        <div className="mx-auto max-w-7xl px-5 sm:px-8">
+          <div className="text-center mb-12">
+            <h2 className="font-display text-3xl font-bold sm:text-4xl text-charcoal">
+              Centre Gallery
+            </h2>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
           {ITEMS.map((it, i) => (
             <figure
               key={i}
-              className={`group relative overflow-hidden rounded-2xl border border-border bg-white shadow-soft ${it.span ?? ""}`}
+              className={`group relative flex items-center justify-center overflow-hidden rounded-2xl border border-border bg-white shadow-soft image-card p-2`}
             >
               <img
                 src={it.src}
                 alt={it.caption}
                 loading="lazy"
-                className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                className="w-full h-auto transition-transform duration-500 group-hover:scale-105"
               />
               <figcaption className="pointer-events-none absolute inset-x-0 bottom-0 bg-gradient-to-t from-charcoal/70 to-transparent p-4 text-sm font-medium text-white opacity-0 transition-opacity group-hover:opacity-100">
                 {it.caption}
               </figcaption>
             </figure>
           ))}
+          </div>
         </div>
       </section>
 

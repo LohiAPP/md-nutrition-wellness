@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { BadgeCheck, HeartHandshake, Leaf, Microscope } from "lucide-react";
-import hero from "@/assets/hero-nutrition.jpg";
+import { useState } from "react";
+import { BadgeCheck, HeartHandshake, Leaf, Microscope, ArrowRight } from "lucide-react";
+import { ContactModal } from "@/components/site/ContactModal";
 import { FinalCTA } from "@/components/site/CTA";
 
 export const Route = createFileRoute("/about")({
@@ -42,8 +43,11 @@ const VALUES = [
 ];
 
 function About() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   return (
     <>
+      <ContactModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
       <section className="bg-gradient-hero">
         <div className="mx-auto max-w-4xl px-5 pb-16 pt-16 text-center sm:px-8 sm:pt-24">
           <p className="text-sm font-semibold uppercase tracking-[0.22em] text-accent">About Us</p>
@@ -60,10 +64,10 @@ function About() {
 
       <section className="mx-auto max-w-7xl px-5 py-16 sm:px-8">
         <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
-          <div className="overflow-hidden rounded-[2rem] border border-border bg-white shadow-lift">
-            <img src={hero} alt="Nutrition coaching in action" width={1280} height={1408} loading="lazy" className="h-full w-full object-cover" />
+          <div className="order-1 lg:order-2 overflow-hidden rounded-[2rem] border border-border bg-white shadow-lift image-card">
+            <img src="/founder.jpeg" alt="Mohammed Mujeeb - Founder" loading="lazy" />
           </div>
-          <div className="space-y-8">
+          <div className="order-2 lg:order-1 space-y-8">
             <div>
               <p className="text-sm font-semibold uppercase tracking-[0.22em] text-accent">Mission</p>
               <p className="mt-3 font-display text-2xl font-semibold leading-snug text-charcoal">
@@ -86,6 +90,34 @@ function About() {
               <p className="mt-1 text-sm text-muted-foreground">
                 Certified Wellness Coach in Nutrition · Guntur, India
               </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-charcoal py-24 text-white">
+        <div className="mx-auto max-w-7xl px-5 sm:px-8">
+          <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
+            <div className="overflow-hidden rounded-3xl shadow-lift bg-white image-card">
+              <img
+                src="/image5.jpeg"
+                alt="Trusted Nutrition & Wellness Experts"
+              />
+            </div>
+            <div>
+              <p className="text-sm font-semibold uppercase tracking-[0.22em] text-accent">Trust & Expertise</p>
+              <h2 className="mt-4 font-display text-3xl font-bold sm:text-4xl text-white">
+                Your Trusted Nutrition & Wellness Experts
+              </h2>
+              <p className="mt-5 text-lg text-white/80 leading-relaxed">
+                Achieve your health goals with personalized nutrition plans and expert wellness guidance designed for your unique needs.
+              </p>
+              <button
+                onClick={() => setIsModalOpen(true)}
+                className="mt-10 inline-flex items-center gap-2 rounded-full bg-gradient-cta px-8 py-4 text-sm font-semibold text-white shadow-lift transition-transform hover:-translate-y-0.5"
+              >
+                Book Now <ArrowRight className="h-4 w-4" />
+              </button>
             </div>
           </div>
         </div>

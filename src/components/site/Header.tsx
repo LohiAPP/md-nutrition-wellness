@@ -1,11 +1,13 @@
 import { useState } from "react";
 import { Link } from "@tanstack/react-router";
 import { Menu, Phone, X } from "lucide-react";
+import { ContactModal } from "./ContactModal";
 import logo from "@/assets/md-logo.png.asset.json";
 import { BRAND, NAV } from "@/lib/site-data";
 
 export function Header() {
   const [open, setOpen] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
     <header className="sticky top-0 z-50 border-b border-border/60 bg-background/85 backdrop-blur-md">
@@ -17,7 +19,7 @@ export function Header() {
           onClick={() => setOpen(false)}
         >
           <img
-            src={logo.url}
+            src="/logo.png"
             alt={`${BRAND.name} logo`}
             width={160}
             height={64}
@@ -40,13 +42,13 @@ export function Header() {
         </nav>
 
         <div className="flex items-center gap-2">
-          <a
-            href={`tel:${BRAND.phoneDigits}`}
+          <button
+            onClick={() => setIsModalOpen(true)}
             className="hidden items-center gap-2 rounded-full bg-gradient-cta px-5 py-2.5 text-sm font-semibold text-white shadow-soft transition-transform hover:-translate-y-0.5 md:inline-flex"
           >
             <Phone className="h-4 w-4" aria-hidden />
-            {BRAND.phone}
-          </a>
+            Free Consultation
+          </button>
           <button
             type="button"
             aria-label={open ? "Close menu" : "Open menu"}
@@ -73,15 +75,16 @@ export function Header() {
                 {item.label}
               </Link>
             ))}
-            <a
-              href={`tel:${BRAND.phoneDigits}`}
+            <button
+              onClick={() => { setOpen(false); setIsModalOpen(true); }}
               className="mt-2 inline-flex items-center justify-center gap-2 rounded-full bg-gradient-cta px-5 py-3 text-sm font-semibold text-white"
             >
-              <Phone className="h-4 w-4" /> {BRAND.phone}
-            </a>
+              <Phone className="h-4 w-4" /> Free Consultation
+            </button>
           </nav>
         </div>
       )}
+      <ContactModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
     </header>
   );
 }

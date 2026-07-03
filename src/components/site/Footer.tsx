@@ -1,6 +1,5 @@
 import { Link } from "@tanstack/react-router";
 import { MapPin, MessageCircle, Phone } from "lucide-react";
-import logo from "@/assets/md-logo.png.asset.json";
 import { BRAND, NAV, SERVICES } from "@/lib/site-data";
 
 export function Footer() {
@@ -9,7 +8,7 @@ export function Footer() {
       <div className="mx-auto grid max-w-7xl gap-12 px-5 py-16 sm:px-8 lg:grid-cols-4">
         <div className="lg:col-span-2">
           <div className="inline-flex items-center rounded-2xl bg-white p-3">
-            <img src={logo.url} alt={`${BRAND.name} logo`} width={200} height={80} className="h-14 w-auto" />
+            <img src="/logo.png" alt={`${BRAND.name} logo`} width={200} height={80} className="h-14 w-auto" />
           </div>
           <p className="mt-6 max-w-md font-display text-xl font-semibold text-white">
             {BRAND.tagline}
