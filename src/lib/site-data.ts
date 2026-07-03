@@ -123,6 +123,36 @@ export const FAQS = [
   },
 ];
 
+export const SPECIALISED = [
+  {
+    title: "Sugar Control",
+    desc: "Balanced blood sugar levels for more energy, better health and a happier life.",
+    icon: "droplet",
+  },
+  {
+    title: "Blood Pressure Balance",
+    desc: "Maintain healthy blood pressure levels and improve heart health naturally.",
+    icon: "heart",
+  },
+  {
+    title: "Cholesterol Management",
+    desc: "Improve cholesterol levels, support heart health and reduce health risks.",
+    icon: "shield",
+  },
+  {
+    title: "Complete Wellness & Weight Management",
+    desc: "Holistic care for your body and mind to achieve lasting wellness and healthy weight.",
+    icon: "sparkles",
+  },
+] as const;
+
+export const SUPPORT_PILLARS = [
+  "Personalized Plans",
+  "Expert Guidance",
+  "Proven Results",
+  "Ongoing Support",
+] as const;
+
 export const STORIES = [
   {
     name: "Priya S.",
