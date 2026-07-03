@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as SuccessStoriesRouteImport } from './routes/success-stories'
 import { Route as ServicesRouteImport } from './routes/services'
+import { Route as GalleryRouteImport } from './routes/gallery'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
 
@@ -22,6 +23,11 @@ const SuccessStoriesRoute = SuccessStoriesRouteImport.update({
 const ServicesRoute = ServicesRouteImport.update({
   id: '/services',
   path: '/services',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GalleryRoute = GalleryRouteImport.update({
+  id: '/gallery',
+  path: '/gallery',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AboutRoute = AboutRouteImport.update({
@@ -38,12 +44,14 @@ const IndexRoute = IndexRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/gallery': typeof GalleryRoute
   '/services': typeof ServicesRoute
   '/success-stories': typeof SuccessStoriesRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/gallery': typeof GalleryRoute
   '/services': typeof ServicesRoute
   '/success-stories': typeof SuccessStoriesRoute
 }
@@ -51,20 +59,28 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/gallery': typeof GalleryRoute
   '/services': typeof ServicesRoute
   '/success-stories': typeof SuccessStoriesRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/about' | '/services' | '/success-stories'
+  fullPaths: '/' | '/about' | '/gallery' | '/services' | '/success-stories'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/about' | '/services' | '/success-stories'
-  id: '__root__' | '/' | '/about' | '/services' | '/success-stories'
+  to: '/' | '/about' | '/gallery' | '/services' | '/success-stories'
+  id:
+    | '__root__'
+    | '/'
+    | '/about'
+    | '/gallery'
+    | '/services'
+    | '/success-stories'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
+  GalleryRoute: typeof GalleryRoute
   ServicesRoute: typeof ServicesRoute
   SuccessStoriesRoute: typeof SuccessStoriesRoute
 }
@@ -83,6 +99,13 @@ declare module '@tanstack/react-router' {
       path: '/services'
       fullPath: '/services'
       preLoaderRoute: typeof ServicesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/gallery': {
+      id: '/gallery'
+      path: '/gallery'
+      fullPath: '/gallery'
+      preLoaderRoute: typeof GalleryRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/about': {
@@ -105,6 +128,7 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
+  GalleryRoute: GalleryRoute,
   ServicesRoute: ServicesRoute,
   SuccessStoriesRoute: SuccessStoriesRoute,
 }
