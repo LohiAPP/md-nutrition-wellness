@@ -121,6 +121,18 @@ export const FAQS = [
     q: "Do you give strict diet plans?",
     a: "Our focus is not on extreme restrictions. We provide realistic, practical, and sustainable nutrition guidance.",
   },
+  {
+    q: "How long are the consultation sessions?",
+    a: "Sessions typically last between 30 to 45 minutes and are tailored to your individual needs.",
+  },
+  {
+    q: "Are follow-ups included in the program?",
+    a: "Yes, regular follow-ups are part of every program to track your progress and adjust your plan as needed.",
+  },
+  {
+    q: "What makes MD Nutrition Centre special?",
+    a: "Our personalized approach, expert coaching by Mohammed Mujeeb, and focus on lasting lifestyle changes set us apart.",
+  },
 ];
 
 export const SPECIALISED = [
