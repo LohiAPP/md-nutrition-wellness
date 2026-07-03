@@ -270,7 +270,6 @@ function Home() {
         </div>
       </section>
 
-      {/* HOW IT WORKS */}
       {/* SPECIALISED SUPPORT */}
       <section className="relative overflow-hidden bg-gradient-to-b from-[color:var(--brand-ivory)] to-white py-20">
         <div aria-hidden className="pointer-events-none absolute -top-10 left-1/2 h-40 w-[120%] -translate-x-1/2 rounded-[50%] bg-green/10 blur-3xl" />
