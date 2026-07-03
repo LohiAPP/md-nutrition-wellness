@@ -40,23 +40,37 @@ function Services() {
 
       <section className="mx-auto max-w-7xl px-5 py-16 sm:px-8">
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {SERVICES.map((s) => (
+          {SERVICES.map((s, i) => (
             <article
               id={s.slug}
               key={s.slug}
-              className="group flex h-full scroll-mt-24 flex-col rounded-2xl border border-border bg-white p-7 shadow-soft transition-all hover:-translate-y-1 hover:shadow-lift"
+              style={{ animationDelay: `${i * 80}ms` }}
+              className="group card-hover animate-rise flex h-full scroll-mt-24 flex-col overflow-hidden rounded-3xl border border-border bg-white shadow-soft"
             >
-              <div className="grid h-14 w-14 place-items-center rounded-2xl bg-ivory text-primary transition-colors group-hover:bg-primary group-hover:text-white">
-                <s.icon className="h-7 w-7" />
+              <div className="relative aspect-[16/10] overflow-hidden">
+                <img
+                  src={s.image}
+                  alt={s.title}
+                  width={1024}
+                  height={640}
+                  loading="lazy"
+                  className="h-full w-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-charcoal/55 via-charcoal/10 to-transparent" />
+                <div className="absolute left-4 top-4 grid h-11 w-11 place-items-center rounded-xl bg-white/95 text-primary shadow-soft backdrop-blur">
+                  <s.icon className="h-5 w-5" />
+                </div>
               </div>
-              <h2 className="mt-6 font-display text-xl font-bold text-charcoal">{s.title}</h2>
-              <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{s.description}</p>
-              <a
-                href="/contact"
-                className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-primary hover:gap-3"
-              >
-                Book consultation <ArrowRight className="h-4 w-4" />
-              </a>
+              <div className="flex flex-1 flex-col p-6">
+                <h2 className="font-display text-lg font-bold text-charcoal">{s.title}</h2>
+                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{s.description}</p>
+                <a
+                  href="/contact"
+                  className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-primary hover:gap-3 transition-all"
+                >
+                  Book consultation <ArrowRight className="h-4 w-4" />
+                </a>
+              </div>
             </article>
           ))}
         </div>
