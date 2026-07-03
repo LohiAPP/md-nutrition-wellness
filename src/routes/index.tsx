@@ -272,7 +272,6 @@ function Home() {
 
       {/* HOW IT WORKS */}
       <section className="bg-charcoal py-20 text-white">
-
         <div className="mx-auto max-w-7xl px-5 sm:px-8">
           <div className="max-w-2xl">
             <p className="text-sm font-semibold uppercase tracking-[0.22em] text-[color:var(--brand-ivory)]">
