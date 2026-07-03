@@ -288,21 +288,34 @@ function Home() {
 
           <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {[
-              { icon: Droplet, title: "Sugar Control", desc: "Balanced blood sugar levels for more energy, better health and a happier life." },
-              { icon: HeartPulse, title: "Blood Pressure Balance", desc: "Maintain healthy blood pressure levels and improve heart health naturally." },
-              { icon: ShieldCheck, title: "Cholesterol Management", desc: "Improve cholesterol levels, support heart health and reduce health risks." },
-              { icon: Sparkles, title: "Complete Wellness & Weight Management", desc: "Holistic care for your body and mind to achieve lasting wellness and healthy weight." },
+              { icon: Droplet, image: specSugar, title: "Sugar Control", desc: "Balanced blood sugar levels for more energy, better health and a happier life." },
+              { icon: HeartPulse, image: specBp, title: "Blood Pressure Balance", desc: "Maintain healthy blood pressure levels and improve heart health naturally." },
+              { icon: ShieldCheck, image: specChol, title: "Cholesterol Management", desc: "Improve cholesterol levels, support heart health and reduce health risks." },
+              { icon: Sparkles, image: specWellness, title: "Complete Wellness & Weight Management", desc: "Holistic care for your body and mind to achieve lasting wellness and healthy weight." },
             ].map((c, i) => (
               <div
                 key={c.title}
                 style={{ animationDelay: `${i * 90}ms` }}
-                className="card-hover animate-rise group relative flex flex-col items-center rounded-3xl border border-border bg-white p-7 text-center shadow-soft"
+                className="card-hover animate-rise group relative flex flex-col overflow-hidden rounded-3xl border border-border bg-white text-center shadow-soft"
               >
-                <div className="grid h-16 w-16 place-items-center rounded-full bg-gradient-to-br from-primary to-accent text-white shadow-lift transition-transform group-hover:scale-110">
-                  <c.icon className="h-8 w-8" />
+                <div className="relative aspect-[4/3] overflow-hidden">
+                  <img
+                    src={c.image}
+                    alt={c.title}
+                    width={800}
+                    height={600}
+                    loading="lazy"
+                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-charcoal/60 via-charcoal/10 to-transparent" />
+                  <div className="absolute -bottom-6 left-1/2 grid h-14 w-14 -translate-x-1/2 place-items-center rounded-full bg-gradient-to-br from-primary to-accent text-white shadow-lift ring-4 ring-white">
+                    <c.icon className="h-6 w-6" />
+                  </div>
                 </div>
-                <h3 className="mt-5 font-display text-base font-bold uppercase tracking-wide text-charcoal">{c.title}</h3>
-                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{c.desc}</p>
+                <div className="flex flex-1 flex-col px-6 pb-6 pt-10">
+                  <h3 className="font-display text-base font-bold uppercase tracking-wide text-charcoal">{c.title}</h3>
+                  <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{c.desc}</p>
+                </div>
               </div>
             ))}
           </div>
