@@ -88,7 +88,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       },
       { name: "author", content: "MD Nutrition Centre" },
       { name: "theme-color", content: "#007B83" },
-      { property: "og:title", content: "MD Nutrition Centre — Smart Nutrition Coaching" },
+      { property: "og:title", content: "MD Nutrition Centre — Strong Body. Sharp Mind. Smart Nutrition." },
       {
         property: "og:description",
         content:
@@ -96,6 +96,12 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "MD Nutrition Centre — Strong Body. Sharp Mind. Smart Nutrition." },
+      { name: "description", content: "Wellness Hub is a modern, responsive website for MD Nutrition Centre, offering expert guidance for health, wellness, and nutrition." },
+      { property: "og:description", content: "Wellness Hub is a modern, responsive website for MD Nutrition Centre, offering expert guidance for health, wellness, and nutrition." },
+      { name: "twitter:description", content: "Wellness Hub is a modern, responsive website for MD Nutrition Centre, offering expert guidance for health, wellness, and nutrition." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/bb694517-20c3-4095-b7a1-3a4e7edae3d2/id-preview-d7aabeb6--89e5364a-b156-4373-a82a-a139df4abb99.lovable.app-1783067182360.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/bb694517-20c3-4095-b7a1-3a4e7edae3d2/id-preview-d7aabeb6--89e5364a-b156-4373-a82a-a139df4abb99.lovable.app-1783067182360.png" },
     ],
     links: [
       {
