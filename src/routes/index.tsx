@@ -199,6 +199,77 @@ function Home() {
         </div>
       </section>
 
+      {/* FOUNDER */}
+      <section className="relative overflow-hidden bg-charcoal py-20 text-white">
+        <div aria-hidden className="pointer-events-none absolute -left-24 top-1/4 h-72 w-72 rounded-full bg-primary/20 blur-3xl animate-blob" />
+        <div aria-hidden className="pointer-events-none absolute -right-24 bottom-0 h-80 w-80 rounded-full bg-accent/15 blur-3xl animate-blob" style={{ animationDelay: "-5s" }} />
+        <div className="mx-auto grid max-w-7xl gap-12 px-5 sm:px-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
+          <div className="relative order-2 lg:order-1">
+            <div className="absolute -inset-4 -z-10 rounded-[2.5rem] bg-gradient-to-br from-primary/40 to-accent/30 blur-2xl" />
+            <div className="relative mx-auto max-w-md overflow-hidden rounded-[2rem] border-4 border-white/10 bg-gradient-to-b from-white/5 to-transparent shadow-lift">
+              <img
+                src={founderAsset.url}
+                alt="Mohammed Mujeeb — Senior Wellness Coach & Founder of MD Nutrition Centre"
+                width={768}
+                height={1024}
+                loading="lazy"
+                className="h-full w-full object-cover"
+              />
+            </div>
+            <div className="absolute -bottom-4 left-1/2 hidden -translate-x-1/2 rounded-2xl bg-white px-5 py-3 text-center shadow-lift sm:block">
+              <p className="font-display text-lg font-extrabold text-charcoal">Mohammed Mujeeb</p>
+              <p className="text-xs font-semibold uppercase tracking-widest text-primary">Senior Wellness Coach</p>
+            </div>
+          </div>
+
+          <div className="order-1 animate-rise lg:order-2">
+            <span className="inline-flex items-center gap-2 rounded-full border border-accent/30 bg-white/5 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-accent">
+              <Sparkles className="h-3.5 w-3.5" /> Meet the Founder
+            </span>
+            <h2 className="mt-5 font-display text-4xl font-extrabold leading-tight sm:text-5xl">
+              Transform Your Health.<br />
+              <span className="text-gradient-brand">Transform Your Life.</span>
+            </h2>
+            <p className="mt-6 text-base leading-relaxed text-white/80 sm:text-lg">
+              Personalized nutrition and lifestyle coaching to help you achieve sustainable weight loss,
+              better health and lifelong wellness — guided by Senior Wellness Coach Mohammed Mujeeb.
+            </p>
+            <blockquote className="mt-6 rounded-2xl border-l-4 border-accent bg-white/5 px-5 py-4 italic text-[color:var(--brand-ivory)]/90">
+              “Your health transformation is our mission.”
+            </blockquote>
+
+            <div className="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-4">
+              {[
+                { k: "100+", v: "Happy Clients" },
+                { k: "100+", v: "Kgs Weight Loss" },
+                { k: "98%", v: "Client Satisfaction" },
+                { k: "2+", v: "Years of Expertise" },
+              ].map((s) => (
+                <div key={s.v} className="rounded-2xl border border-white/10 bg-white/5 p-4 text-center">
+                  <p className="font-display text-2xl font-extrabold text-accent sm:text-3xl">{s.k}</p>
+                  <p className="mt-1 text-xs text-white/70">{s.v}</p>
+                </div>
+              ))}
+            </div>
+
+            <div className="mt-6 flex flex-wrap gap-2">
+              {["Weight Loss Management", "Diabetes Coaching", "PCOS/PCOD", "Thyroid Care", "Lifestyle Transformation"].map((t) => (
+                <span key={t} className="rounded-full bg-white/10 px-3 py-1 text-xs font-semibold text-white">
+                  {t}
+                </span>
+              ))}
+            </div>
+
+            <Link
+              to="/contact"
+              className="mt-8 inline-flex items-center gap-2 rounded-full bg-gradient-cta px-6 py-3.5 text-sm font-semibold text-white shadow-lift transition-transform hover:-translate-y-0.5"
+            >
+              Book Free Consultation <ArrowRight className="h-4 w-4" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* SERVICES PREVIEW */}
       <section className="bg-[color:var(--brand-sand)]/60 py-20">
         <div className="mx-auto max-w-7xl px-5 sm:px-8">
