@@ -89,7 +89,7 @@ const WHY = [
   "Regular follow-up and progress tracking",
   "Support for weight loss, diabetes, PCOS/PCOD, thyroid, and lifestyle transformation",
   "Online and in-person consultation options",
-  "Professional wellness coaching by Mohammed Mujeeb",
+  "Professional wellness coaching by Mahammed Mujeeb",
 ];
 
 function Home() {
@@ -154,7 +154,7 @@ function Home() {
           <div className="relative overflow-hidden rounded-[2rem] bg-white shadow-soft image-card w-full block lg:hidden h-[400px]">
             <img
               src="/founder.jpeg"
-              alt="Mohammed Mujeeb - MD Nutrition Centre"
+              alt="Mahammed Mujeeb - MD Nutrition Centre"
               loading="lazy"
               className="absolute inset-0 w-full h-full object-cover"
             />

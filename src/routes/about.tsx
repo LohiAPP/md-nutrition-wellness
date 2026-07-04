@@ -11,7 +11,7 @@ export const Route = createFileRoute("/about")({
       {
         name: "description",
         content:
-          "Meet MD Nutrition Centre — evidence-based nutrition and wellness coaching led by certified coach Mohammed Mujeeb in Guntur.",
+          "Meet MD Nutrition Centre — evidence-based nutrition and wellness coaching led by certified coach Mahammed Mujeeb in Guntur.",
       },
       { property: "og:title", content: "About — MD Nutrition Centre" },
       {
@@ -65,7 +65,7 @@ function About() {
       <section className="mx-auto max-w-7xl px-5 py-16 sm:px-8">
         <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
           <div className="order-1 lg:order-2 overflow-hidden rounded-[2rem] border border-border bg-white shadow-lift image-card">
-            <img src="/founder.jpeg" alt="Mohammed Mujeeb - Founder" loading="lazy" />
+            <img src="/founder2.jpeg" alt="Mahammed Mujeeb - Founder" loading="lazy" />
           </div>
           <div className="order-2 lg:order-1 space-y-8">
             <div>
@@ -86,7 +86,7 @@ function About() {
               <p className="text-sm font-semibold uppercase tracking-[0.22em] text-primary">
                 Led By
               </p>
-              <p className="mt-2 font-display text-xl font-bold text-charcoal">Mohammed Mujeeb</p>
+              <p className="mt-2 font-display text-xl font-bold text-charcoal">Mahammed Mujeeb</p>
               <p className="mt-1 text-sm text-muted-foreground">
                 Certified Wellness Coach in Nutrition · Guntur, India
               </p>
