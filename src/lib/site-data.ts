@@ -15,7 +15,7 @@ export const BRAND = {
   phone: "+91 97009 07707",
   phoneDigits: "919700907707",
   whatsapp: "https://wa.me/919700907707",
-  email: "hello@mdnutritioncentre.com",
+  email: "mdnutritioncentre@gmail.com",
   city: "Guntur, India",
 };
 
@@ -167,31 +167,28 @@ export const SUPPORT_PILLARS = [
 
 export const STORIES = [
   {
-    name: "Priya S.",
-    goal: "Sustainable Weight Loss",
-    result: "Lost 12 kg in 6 months",
+    name: "Mohammed Abdul Shafi.",
+    goal: "Sustainable Weight Management",
+    result: "14 kg lost over 6 months*",
     quote:
-      "The plan felt realistic from day one. No crash diets — just simple daily habits I could actually keep. I feel lighter, sharper and more confident.",
+      "The plan felt realistic from day one. There were no crash diets or unrealistic restrictions—just simple, sustainable habits that fit my lifestyle. Over time, I felt healthier, more energetic, and more confident in my daily life.",
+    image: "/testimonial (2).jpeg",
   },
   {
-    name: "Rakesh V.",
+    name: "Suresh P V.",
     goal: "Diabetes Support",
-    result: "HbA1c 8.9 → 6.4",
+    result: "Suresh | Civil Contractor | Diabetic for 20+ years → Now Insulin-Free",
+    quoteTitle: "20 Years of Diabetes — Finally Free from Insulin!",
     quote:
-      "For the first time my sugar levels feel under control without giving up the foods I love. Mujeeb sir made it easy to understand what my body actually needs.",
+      "My name is Suresh, and I have been living with diabetes for over 20 years. For the last 5 of those years, I was even dependent on insulin injections daily. I had almost accepted that this was just my life.\n\nJoining MD Nutrition Centre completely changed that.\n\nAfter following the guidance here, I no longer need insulin. I am now managing with just a single tablet per day — and honestly, even that feels like a miracle compared to where I was.\n\nThe biggest change I notice is my energy. I used to feel constantly drained and low. Now I wake up with energy, I work with energy, and I finish my day with energy still left in me.\n\nI am a Civil Contractor by profession, and my work demands a lot physically. Earlier, even completing my daily tasks felt like a struggle. Today, I handle my contracts with full strength and confidence.\n\nMy skin problems related to diabetes have also improved significantly.\n\nThis is not just a health centre — it is a life-changing community. If you are struggling with diabetes and feel like there is no way out, I urge you to visit MD Nutrition Centre at least once.\n\nI am living proof that recovery is possible.",
+    image: "/testimonial (3).jpeg",
   },
   {
-    name: "Anitha K.",
+    name: "Sravani P.",
     goal: "PCOS Wellness",
     result: "Energy & cycles improved in 3 months",
     quote:
       "The coaching went beyond food. Sleep, stress, movement — everything came together. My PCOS symptoms are finally manageable.",
-  },
-  {
-    name: "Vikram R.",
-    goal: "Active Lifestyle",
-    result: "Down 8 kg, up 4 hours of daily energy",
-    quote:
-      "I stopped chasing quick fixes. The follow-ups kept me accountable and the results have stayed with me long after the program.",
+    image: "/testimonial (4).jpeg",
   },
 ];

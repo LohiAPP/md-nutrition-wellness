@@ -116,8 +116,8 @@ function Home() {
           <h2 className="font-display text-2xl sm:text-3xl lg:text-4xl font-extrabold text-charcoal">
             80% Nutrition. 20% Exercise. <span className="text-[#067100]">100% Mindset.</span>
           </h2>
-          <p className="mt-3 text-sm sm:text-base text-muted-foreground max-w-2xl mx-auto">
-            Transform your health with the perfect balance. Let's achieve your goals together!
+          <p className="mt-3 text-sm sm:text-base text-muted-foreground max-w-3xl mx-auto">
+            At MD Nutrition Centre, we help you build lifelong healthy habits through personalized nutrition guidance, practical fitness support, and a mindset focused on lasting results.
           </p>
         </div>
 
@@ -126,10 +126,10 @@ function Home() {
           {/* Left Column: Founder Image */}
           <div className="relative overflow-hidden rounded-[2rem] bg-white shadow-soft image-card w-full hidden lg:block h-full min-h-[600px]">
             <img
-              src="/founder.jpeg"
-              alt="Mohammed Mujeeb - MD Nutrition Centre"
+              src="/founder2.jpeg"
+              alt="Mahammed Mujeeb - MD Nutrition Centre"
               loading="lazy"
-              className="absolute inset-0 w-full h-full object-cover"
+              className="absolute inset-0 w-full h-full object-contain p-2"
             />
           </div>
 
@@ -139,8 +139,11 @@ function Home() {
               <Sparkles className="h-3 w-3" /> FREE CONSULTATION
             </span>
             <h1 className="mt-3 font-display text-xl font-extrabold leading-[1.2] text-charcoal sm:text-2xl lg:text-3xl">
-              Get FREE Consultation – Fill the form below for personalized one-to-one guidance
+              Get FREE Consultation
             </h1>
+            <p className="mt-2 text-sm text-muted-foreground">
+              Fill the form below for personalized one-to-one guidance and help you take the first step toward a healthier lifestyle.
+            </p>
             
             <div className="mt-4 flex-1 h-auto min-h-[400px]">
                <ConsultationForm isPopup={false} />
@@ -168,9 +171,10 @@ function Home() {
               Your Nutrition Partner for a Healthier Tomorrow
             </h2>
             <p className="mt-5 text-base leading-relaxed text-muted-foreground sm:text-lg">
-              At MD Nutrition Centre, we believe nutrition should be simple, clear, and sustainable.
-              Our approach empowers you to make informed dietary choices without unnecessary
-              restrictions, helping you achieve your health and wellness goals with confidence.
+              At MD Nutrition Centre, we believe that good nutrition should be simple, practical, and sustainable. Our mission is to help you build healthy eating habits that fit your lifestyle—not temporary diets or unrealistic restrictions.<br /><br />
+              We provide personalized nutrition guidance tailored to your unique health goals, dietary preferences, and daily routine. Whether you're looking to manage your weight, improve your energy, enhance your overall well-being, or develop healthier habits, we're here to support you every step of the way.<br /><br />
+              Our evidence-based, food-first approach focuses on balanced nutrition, long-term lifestyle changes, and ongoing support to help you achieve lasting results with confidence.<br /><br />
+              At MD Nutrition Centre, we're more than nutrition experts—we're your trusted partner on the journey to a healthier, happier tomorrow.
             </p>
             <Link
               to="/about"
@@ -181,8 +185,8 @@ function Home() {
           </div>
           <div className="grid grid-cols-2 gap-4">
             {[
-              { k: "10+", v: "Years of coaching experience" },
-              { k: "1,200+", v: "Clients guided to results" },
+              { k: "3+", v: "Years of coaching experience" },
+              { k: "250+", v: "Clients guided to results" },
               { k: "95%", v: "Client follow-through rate" },
               { k: "4.9★", v: "Average client rating" },
             ].map((s) => (
@@ -205,12 +209,12 @@ function Home() {
             <div className="relative mx-auto max-w-md overflow-hidden rounded-[2rem] border-4 border-white/10 bg-gradient-to-b from-white/5 to-transparent shadow-lift image-card">
               <img
                 src="/founder.jpeg"
-                alt="Mohammed Mujeeb — Senior Wellness Coach & Founder of MD Nutrition Centre"
+                alt="Mahammed Mujeeb — Senior Wellness Coach & Founder of MD Nutrition Centre"
                 loading="lazy"
               />
             </div>
             <div className="absolute -bottom-4 left-1/2 hidden -translate-x-1/2 rounded-2xl bg-white px-5 py-3 text-center shadow-lift sm:block">
-              <p className="font-display text-lg font-extrabold text-charcoal">Mohammed Mujeeb</p>
+              <p className="font-display text-lg font-extrabold text-charcoal">Mahammed Mujeeb</p>
               <p className="text-xs font-semibold uppercase tracking-widest text-primary">Senior Wellness Coach</p>
             </div>
           </div>
@@ -224,8 +228,8 @@ function Home() {
               <span className="text-gradient-brand">Transform Your Life.</span>
             </h2>
             <p className="mt-6 text-base leading-relaxed text-white/80 sm:text-lg">
-              Personalized nutrition and lifestyle coaching to help you achieve sustainable weight loss,
-              better health and lifelong wellness — guided by Senior Wellness Coach Mohammed Mujeeb.
+              At MD Nutrition Centre, we believe lasting health begins with the right guidance and sustainable habits. Under the leadership of Senior Wellness Coach Mahammed Mujeeb, we provide personalized nutrition and lifestyle coaching designed to help you achieve healthy weight management, improved well-being, and lifelong wellness.<br /><br />
+              Every plan is tailored to your unique goals, preferences, and lifestyle—making healthy living practical, enjoyable, and sustainable.
             </p>
             <blockquote className="mt-6 rounded-2xl border-l-4 border-accent bg-white/5 px-5 py-4 italic text-[color:var(--brand-ivory)]/90">
               “Your health transformation is our mission.”
@@ -267,10 +271,10 @@ function Home() {
       <section className="bg-ivory py-20 overflow-hidden">
         <div className="mx-auto max-w-7xl px-5 sm:px-8 text-center">
           <h2 className="font-display text-3xl font-bold sm:text-4xl text-charcoal">
-            Real People. Real Results.
+            Kind Words from Our Clients
           </h2>
-          <p className="mt-3 text-muted-foreground">
-            See real progress shared by the MD Nutrition Centre community.
+          <p className="mt-4 text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+            Real stories from real people. Every nutrition journey is built on trust, personalized care, and lasting lifestyle change. We are honored to support our clients in achieving their health goals, and their experiences reflect our commitment to evidence-based nutrition and compassionate care.
           </p>
         </div>
 
@@ -370,21 +374,40 @@ function Home() {
             <h2 className="mt-3 font-display text-3xl font-bold sm:text-4xl">
               Why Choose MD Nutrition Centre?
             </h2>
-            <p className="mt-5 text-muted-foreground">
-              A programme built on evidence, empathy and consistency — no fads, no extremes,
-              just changes you can live with.
+            <p className="mt-5 text-muted-foreground leading-relaxed">
+              At MD Nutrition Centre, we believe lasting results come from evidence-based nutrition, personalized guidance, and consistent support. Our approach is built on science, empathy, and sustainable habits—not fad diets, quick fixes, or extreme restrictions.<br /><br />
+              We help you make practical lifestyle changes that fit your routine, so you can achieve your health goals with confidence and maintain them for the long term.
             </p>
           </div>
-          <ul className="grid gap-3 sm:grid-cols-2">
-            {WHY.map((w) => (
-              <li
-                key={w}
-                className="flex items-start gap-3 rounded-2xl border border-border bg-white p-4 shadow-soft"
-              >
-                <BadgeCheck className="mt-0.5 h-5 w-5 shrink-0 text-accent" />
-                <span className="text-sm leading-relaxed text-charcoal">{w}</span>
-              </li>
-            ))}
+          <ul className="grid gap-4 sm:grid-cols-1">
+            <li className="flex items-start gap-4 rounded-2xl border border-border bg-white p-5 shadow-soft">
+              <BadgeCheck className="mt-1 h-6 w-6 shrink-0 text-accent" />
+              <div>
+                <strong className="block text-charcoal font-display text-lg">1. Truly Personalized Nutrition Plans</strong>
+                <span className="text-sm leading-relaxed text-muted-foreground mt-1 block">Every nutrition plan is thoughtfully designed around your health goals, medical needs, cultural preferences, food choices, and daily lifestyle—never a one-size-fits-all template.</span>
+              </div>
+            </li>
+            <li className="flex items-start gap-4 rounded-2xl border border-border bg-white p-5 shadow-soft">
+              <BadgeCheck className="mt-1 h-6 w-6 shrink-0 text-accent" />
+              <div>
+                <strong className="block text-charcoal font-display text-lg">2. Food-First, Sustainable Approach</strong>
+                <span className="text-sm leading-relaxed text-muted-foreground mt-1 block">We believe in the power of real, wholesome food. No crash diets, unnecessary supplements, or extreme restrictions—just balanced, portion-controlled meals that fit your lifestyle and deliver lasting results.</span>
+              </div>
+            </li>
+            <li className="flex items-start gap-4 rounded-2xl border border-border bg-white p-5 shadow-soft">
+              <BadgeCheck className="mt-1 h-6 w-6 shrink-0 text-accent" />
+              <div>
+                <strong className="block text-charcoal font-display text-lg">3. Continuous Guidance & Support</strong>
+                <span className="text-sm leading-relaxed text-muted-foreground mt-1 block">Your journey doesn't end with a diet plan. Receive regular progress reviews, ongoing plan adjustments, and convenient WhatsApp support to help you stay motivated, overcome challenges, and achieve your goals.</span>
+              </div>
+            </li>
+            <li className="flex items-start gap-4 rounded-2xl border border-border bg-white p-5 shadow-soft">
+              <BadgeCheck className="mt-1 h-6 w-6 shrink-0 text-accent" />
+              <div>
+                <strong className="block text-charcoal font-display text-lg">4. Science-Backed Care with Compassion</strong>
+                <span className="text-sm leading-relaxed text-muted-foreground mt-1 block">Our qualified nutrition professionals combine evidence-based practice with personalized, compassionate care—listening to your needs, understanding your challenges, and guiding you with expertise every step of the way.</span>
+              </div>
+            </li>
           </ul>
         </div>
       </section>
@@ -398,6 +421,10 @@ function Home() {
             <h2 className="mt-3 font-display text-3xl font-extrabold leading-tight text-charcoal sm:text-4xl lg:text-5xl">
               <span className="text-gradient-brand">Personalized Guidance.</span> Proven Results. Better Health.
             </h2>
+            <p className="mt-5 text-muted-foreground max-w-2xl mx-auto">
+              Whether your goal is healthy weight management, improved nutrition, enhanced energy, or long-term wellness, our personalized coaching is tailored to your unique needs, lifestyle, and health goals.<br /><br />
+              We provide practical, evidence-based guidance to help you build sustainable habits and achieve lasting results.
+            </p>
           </div>
 
           <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
@@ -469,26 +496,66 @@ function Home() {
               How It Works
             </p>
             <h2 className="mt-3 font-display text-3xl font-bold text-white sm:text-4xl">
-              A clear, four-step journey to your best self
+              A Simple, Four-Step Journey to Better Health
             </h2>
+            <p className="mt-4 text-white/70 leading-relaxed">
+              Our personalized coaching process is designed to make healthy living simple, sustainable, and achievable. From understanding your goals to providing ongoing support, we're with you every step of your wellness journey.
+            </p>
           </div>
 
           <ol className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {STEPS.map((s, i) => (
-              <li
-                key={s.title}
-                className="relative rounded-2xl border border-white/10 bg-white/[0.04] p-6 backdrop-blur"
-              >
-                <div className="flex items-center gap-3">
-                  <span className="font-display text-4xl font-extrabold text-primary">
-                    0{i + 1}
-                  </span>
-                  <s.icon className="h-6 w-6 text-[color:var(--brand-ivory)]" />
-                </div>
-                <h3 className="mt-4 font-display text-lg font-bold text-white">{s.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-white/70">{s.desc}</p>
-              </li>
-            ))}
+            <li className="relative rounded-2xl border border-white/10 bg-white/[0.04] p-6 backdrop-blur flex flex-col h-full">
+              <div className="flex items-center gap-3">
+                <span className="font-display text-4xl font-extrabold text-primary">01</span>
+              </div>
+              <h3 className="mt-4 font-display text-lg font-bold text-white">Book Your Free Health Assessment</h3>
+              <p className="mt-2 text-sm leading-relaxed text-white/70 flex-1">
+                Schedule your FREE health assessment by calling or messaging us on WhatsApp. Choose a convenient time, and we'll help you take the first step toward achieving your health and wellness goals.
+              </p>
+              <a href="https://calendly.com/mujeeb-nutrition/one-to-one-meeting?month=2026-07" target="_blank" rel="noreferrer" className="mt-6 inline-flex items-center justify-center gap-2 rounded-full bg-primary px-4 py-2.5 text-xs font-semibold text-white transition-colors hover:bg-primary/90">
+                Book Appointment <ArrowRight className="h-3 w-3" />
+              </a>
+            </li>
+            
+            <li className="relative rounded-2xl border border-white/10 bg-white/[0.04] p-6 backdrop-blur flex flex-col h-full">
+              <div className="flex items-center gap-3">
+                <span className="font-display text-4xl font-extrabold text-primary">02</span>
+              </div>
+              <h3 className="mt-4 font-display text-lg font-bold text-white">Understand Your Health Goals</h3>
+              <p className="mt-2 text-sm leading-relaxed text-white/70 flex-1">
+                We take the time to understand your lifestyle, dietary habits, health history, and wellness goals.<br /><br />
+                This helps us understand what a healthier version of you looks like and how we can support your transformation journey.
+              </p>
+              <button onClick={() => setIsModalOpen(true)} className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-full border border-primary text-primary hover:bg-primary hover:text-white px-4 py-2.5 text-xs font-semibold transition-colors">
+                Start Assessment <ArrowRight className="h-3 w-3" />
+              </button>
+            </li>
+
+            <li className="relative rounded-2xl border border-white/10 bg-white/[0.04] p-6 backdrop-blur flex flex-col h-full">
+              <div className="flex items-center gap-3">
+                <span className="font-display text-4xl font-extrabold text-primary">03</span>
+              </div>
+              <h3 className="mt-4 font-display text-lg font-bold text-white">Get Your Personalized Plan</h3>
+              <p className="mt-2 text-sm leading-relaxed text-white/70 flex-1">
+                Receive a personalized nutrition and lifestyle plan tailored to your body, health goals, dietary preferences, and daily routine. Our practical, evidence-based recommendations are designed to help you build sustainable habits and achieve lasting results.
+              </p>
+              <a href="https://forms.gle/KyWakw7E8ptdWNvy8" target="_blank" rel="noreferrer" className="mt-6 inline-flex items-center justify-center gap-2 rounded-full bg-primary px-4 py-2.5 text-xs font-semibold text-white transition-colors hover:bg-primary/90">
+                Fill Registration Form <ArrowRight className="h-3 w-3" />
+              </a>
+            </li>
+
+            <li className="relative rounded-2xl border border-white/10 bg-white/[0.04] p-6 backdrop-blur flex flex-col h-full">
+              <div className="flex items-center gap-3">
+                <span className="font-display text-4xl font-extrabold text-primary">04</span>
+              </div>
+              <h3 className="mt-4 font-display text-lg font-bold text-white">Follow-Up & Progress Tracking</h3>
+              <p className="mt-2 text-sm leading-relaxed text-white/70 flex-1">
+                Stay on track with regular follow-up sessions to monitor your progress, address challenges, and refine your nutrition and lifestyle plan as your needs evolve. Ongoing guidance and support help you build lasting healthy habits.
+              </p>
+              <a href="https://chat.whatsapp.com/IF8lLJ6M1GI77Kv7LwZKWz" target="_blank" rel="noreferrer" className="mt-6 inline-flex items-center justify-center gap-2 rounded-full bg-[#25D366] px-4 py-2.5 text-xs font-semibold text-white transition-colors hover:bg-[#25D366]/90">
+                Join Personal Tracking Group <ArrowRight className="h-3 w-3" />
+              </a>
+            </li>
           </ol>
         </div>
       </section>
@@ -499,9 +566,9 @@ function Home() {
           <div className="max-w-2xl">
             <p className="text-sm font-semibold uppercase tracking-[0.22em] text-accent">Success Stories</p>
             <h2 className="mt-3 font-display text-3xl font-bold sm:text-4xl">Real People. Real Results.</h2>
-            <p className="mt-4 text-muted-foreground">
-              Our programs are designed to create sustainable lifestyle changes, helping clients
-              feel healthier, more confident, and more energetic.
+            <p className="mt-4 text-muted-foreground leading-relaxed">
+              Every health journey is unique, and every success is worth celebrating. Through personalized nutrition guidance, practical lifestyle changes, and ongoing support, our clients have built healthier habits, improved their well-being, and gained greater confidence—one step at a time.<br /><br />
+              Their stories reflect the power of consistency, sustainable choices, and a personalized approach to lifelong wellness.
             </p>
           </div>
           <Link
@@ -516,18 +583,22 @@ function Home() {
           {STORIES.slice(0, 3).map((s) => (
             <article
               key={s.name}
-              className="flex h-full flex-col rounded-2xl border border-border bg-white p-6 shadow-soft"
+              className="flex h-full flex-col rounded-2xl border border-border bg-white p-6 shadow-soft relative"
             >
-              <Quote className="h-8 w-8 text-primary/40" />
-              <p className="mt-3 text-sm leading-relaxed text-charcoal">“{s.quote}”</p>
-              <div className="mt-6 flex items-center justify-between border-t border-border pt-4">
+              {s.image && (
+                <div className="w-16 h-16 rounded-full overflow-hidden border-2 border-primary mb-4 shrink-0">
+                  <img src={s.image} alt={s.name} className="w-full h-full object-cover" />
+                </div>
+              )}
+              {s.quoteTitle && (
+                <h4 className="font-display font-bold text-charcoal mb-2">{s.quoteTitle}</h4>
+              )}
+              <p className="text-sm leading-relaxed text-charcoal whitespace-pre-line line-clamp-[8]">“{s.quote}”</p>
+              <div className="mt-6 flex items-center justify-between border-t border-border pt-4 mt-auto">
                 <div>
                   <p className="font-display text-sm font-bold text-charcoal">{s.name}</p>
                   <p className="text-xs text-muted-foreground">{s.goal}</p>
                 </div>
-                <span className="rounded-full bg-ivory px-3 py-1 text-xs font-semibold text-primary">
-                  {s.result}
-                </span>
               </div>
             </article>
           ))}

@@ -152,13 +152,35 @@ export function ConsultationForm({ isPopup = false }: { isPopup?: boolean }) {
     e.preventDefault();
     if (!canGoNext()) return;
     
-    console.log("Form Submitted", {
-      ...formData,
-      bmi: bmiData,
-      bodyFat: bodyFatData
-    });
-
     setIsSubmitted(true);
+
+    const message = `Hello MD Nutrition Centre! I would like to book my free consultation. Here are my details:
+
+*Personal Info*
+Name: ${formData.name}
+Phone: ${formData.phone}
+Age: ${formData.age} yrs
+Height: ${formData.height} cm
+Weight: ${formData.weight} kg
+
+*Assessment Results*
+Goal: ${formData.goal}
+BMI: ${bmiData?.bmi || 'N/A'} (${bmiData?.category || 'N/A'})
+Body Fat: ${bodyFatData?.bodyFat || 'N/A'}% (${bodyFatData?.category || 'N/A'})
+Target Timeline: ${formData.timeline}
+Tried Before: ${formData.previousTransformation}
+Best Time to Contact: ${formData.contactTime}
+Preferred Contact Mode: ${formData.contactMode}
+
+Looking forward to starting my journey!`;
+
+    const encodedMessage = encodeURIComponent(message);
+    const whatsappUrl = `https://wa.me/919700907707?text=${encodedMessage}`;
+    
+    // Open WhatsApp in a new tab after a brief delay so the user sees the success state
+    setTimeout(() => {
+      window.open(whatsappUrl, "_blank");
+    }, 800);
   };
 
   const handleSingleChoice = (key: keyof FormState, value: string) => {
