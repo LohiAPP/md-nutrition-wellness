@@ -585,11 +585,6 @@ function Home() {
               key={s.name}
               className="flex h-full flex-col rounded-2xl border border-border bg-white p-6 shadow-soft relative"
             >
-              {s.image && (
-                <div className="w-16 h-16 rounded-full overflow-hidden border-2 border-primary mb-4 shrink-0">
-                  <img src={s.image} alt={s.name} className="w-full h-full object-cover" />
-                </div>
-              )}
               {s.quoteTitle && (
                 <h4 className="font-display font-bold text-charcoal mb-2">{s.quoteTitle}</h4>
               )}
