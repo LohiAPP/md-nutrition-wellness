@@ -621,8 +621,8 @@ function Home() {
             </Link>
           </div>
 
-          <div className="mt-10 grid grid-cols-2 gap-4 md:grid-cols-4">
-            {[g1, g2, g3, g4].map((src, i) => (
+          <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-3">
+            {[g1, g2, g3].map((src, i) => (
               <div
                 key={i}
                 className="overflow-hidden rounded-2xl border border-white/60 bg-white shadow-soft"
