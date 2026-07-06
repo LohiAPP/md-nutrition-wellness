@@ -1,13 +1,6 @@
 import { Activity, Apple, Brain, ClipboardCheck, HeartPulse, Salad, Sparkles, Waves } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
-import svcWeight from "@/assets/svc-weight.jpg";
-import svcWellness from "@/assets/svc-wellness.jpg";
-import svcEducation from "@/assets/svc-education.jpg";
-import svcAssessment from "@/assets/svc-assessment.jpg";
-import svcPcos from "@/assets/svc-pcos.jpg";
-import svcDiabetes from "@/assets/svc-diabetes.jpg";
-import svcThyroid from "@/assets/svc-thyroid.jpg";
-import svcActive from "@/assets/svc-active.jpg";
+
 
 export const BRAND = {
   name: "MD Nutrition Centre",
@@ -34,7 +27,7 @@ export const SERVICES: Service[] = [
     description:
       "Achieve sustainable weight loss with personalized nutrition plans and expert lifestyle coaching.",
     icon: Activity,
-    image: svcWeight,
+    image: "/service7.jpeg",
   },
   {
     slug: "wellness-coaching",
@@ -42,7 +35,7 @@ export const SERVICES: Service[] = [
     description:
       "Build healthy daily habits and improve your overall lifestyle with practical wellness support.",
     icon: Sparkles,
-    image: svcWellness,
+    image: "/service (1).jpeg",
   },
   {
     slug: "nutrition-education",
@@ -50,7 +43,7 @@ export const SERVICES: Service[] = [
     description:
       "Learn how to make smart, sustainable food choices for long-term health.",
     icon: Apple,
-    image: svcEducation,
+    image: "/service (3).jpeg",
   },
   {
     slug: "personal-assessment",
@@ -58,7 +51,7 @@ export const SERVICES: Service[] = [
     description:
       "Understand your current lifestyle and get clear guidance for improvement.",
     icon: ClipboardCheck,
-    image: svcAssessment,
+    image: "/service (5).jpeg",
   },
   {
     slug: "pcos-pcod",
@@ -66,7 +59,7 @@ export const SERVICES: Service[] = [
     description:
       "Personalized nutrition and lifestyle support for hormonal wellness and better energy.",
     icon: HeartPulse,
-    image: svcPcos,
+    image: "/service (4).jpeg",
   },
   {
     slug: "diabetes",
@@ -74,7 +67,7 @@ export const SERVICES: Service[] = [
     description:
       "Lifestyle-focused nutrition guidance to support better sugar control and metabolic health.",
     icon: Waves,
-    image: svcDiabetes,
+    image: "/service8.jpeg",
   },
   {
     slug: "thyroid",
@@ -82,7 +75,7 @@ export const SERVICES: Service[] = [
     description:
       "Practical nutrition and lifestyle coaching to support metabolism, energy, weight management, and overall thyroid wellness.",
     icon: Brain,
-    image: svcThyroid,
+    image: "/service (2).jpeg",
   },
   {
     slug: "active-lifestyle",
@@ -90,7 +83,7 @@ export const SERVICES: Service[] = [
     description:
       "Develop strong daily habits with coaching focused on nutrition, fitness, sleep, consistency, and overall wellness.",
     icon: Salad,
-    image: svcActive,
+    image: "/service (6).jpeg",
   },
 ];
 
@@ -131,7 +124,7 @@ export const FAQS = [
   },
   {
     q: "What makes MD Nutrition Centre special?",
-    a: "Our personalized approach, expert coaching by Mohammed Mujeeb, and focus on lasting lifestyle changes set us apart.",
+    a: "Our personalized approach, expert coaching by Mahammed Mujeeb, and focus on lasting lifestyle changes set us apart.",
   },
 ];
 
