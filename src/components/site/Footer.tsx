@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { MapPin, MessageCircle, Phone, Facebook, Instagram, Linkedin } from "lucide-react";
+import { MapPin, MessageCircle, Phone, Facebook, Instagram, Linkedin, Youtube } from "lucide-react";
 import { BRAND, NAV, SERVICES } from "@/lib/site-data";
 
 export function Footer() {
@@ -24,8 +24,8 @@ export function Footer() {
             <a href="https://www.instagram.com/mdnutritioncentre/" target="_blank" rel="noreferrer" className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-white transition-colors hover:bg-primary hover:text-white" aria-label="MD Nutrition Centre Instagram">
               <Instagram className="h-5 w-5" />
             </a>
-            <a href="https://www.instagram.com/mujeeb.wellnesscoach/" target="_blank" rel="noreferrer" className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-white transition-colors hover:bg-primary hover:text-white" aria-label="Coach Instagram">
-              <Instagram className="h-5 w-5" />
+            <a href="https://www.youtube.com/channel/UCn6Hdbop9_dNnaeLMN_jqKg" target="_blank" rel="noreferrer" className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-white transition-colors hover:bg-primary hover:text-white" aria-label="YouTube">
+              <Youtube className="h-5 w-5" />
             </a>
             <a href="https://www.linkedin.com/in/mahammedmujeeb/" target="_blank" rel="noreferrer" className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-white transition-colors hover:bg-primary hover:text-white" aria-label="LinkedIn">
               <Linkedin className="h-5 w-5" />

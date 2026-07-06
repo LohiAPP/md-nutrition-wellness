@@ -18,14 +18,7 @@ import {
   CheckCircle2,
 } from "lucide-react";
 import hero from "@/assets/hero-nutrition.jpg";
-import g1 from "@/assets/gallery-1.jpg";
-import g2 from "@/assets/gallery-2.jpg";
-import g3 from "@/assets/gallery-3.jpg";
-import g4 from "@/assets/gallery-4.jpg";
-import specSugar from "@/assets/spec-sugar.jpg";
-import specBp from "@/assets/spec-bp.jpg";
-import specChol from "@/assets/spec-cholesterol.jpg";
-import specWellness from "@/assets/spec-wellness.jpg";
+
 import founderAsset from "@/assets/mohammed-mujeeb.jpg.asset.json";
 import { BRAND, FAQS, SERVICES, STORIES } from "@/lib/site-data";
 import { ContactModal } from "@/components/site/ContactModal";
@@ -286,7 +279,7 @@ function Home() {
             ref={carouselRef}
             className="flex gap-6 overflow-x-auto snap-x snap-mandatory hide-scrollbar pb-8 px-5 sm:px-8"
           >
-            {[2, 3, 4, 5, 6, 7].map((num) => (
+            {[3, 7, 5, 6, 4, 2].map((num) => (
               <div key={num} className="snap-center shrink-0 w-[280px] sm:w-[320px] rounded-2xl bg-white shadow-soft p-3 flex flex-col items-center justify-center border border-border">
                 <img 
                   src={`/testimonial (${num}).jpeg`} 
@@ -432,10 +425,10 @@ function Home() {
 
           <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {[
-              { icon: Droplet, image: specSugar, title: "Sugar Control", desc: "Balanced blood sugar levels for more energy, better health and a happier life." },
-              { icon: HeartPulse, image: specBp, title: "Blood Pressure Balance", desc: "Maintain healthy blood pressure levels and improve heart health naturally." },
-              { icon: ShieldCheck, image: specChol, title: "Cholesterol Management", desc: "Improve cholesterol levels, support heart health and reduce health risks." },
-              { icon: Sparkles, image: specWellness, title: "Complete Wellness & Weight Management", desc: "Holistic care for your body and mind to achieve lasting wellness and healthy weight." },
+              { icon: Droplet, image: "/splimg1.jpeg", title: "Sugar Control", desc: "Balanced blood sugar levels support steady energy, better overall health, and a healthier, happier life. Our personalized nutrition plans help you manage your blood sugar naturally through balanced meals, healthy lifestyle habits, and sustainable dietary guidance." },
+              { icon: HeartPulse, image: "/splimg2.jpeg", title: "Blood Pressure Balance", desc: "Support healthy blood pressure and improve heart health with personalized nutrition, balanced eating habits, and sustainable lifestyle changes. Our evidence-based guidance helps you build long-term habits for a healthier heart and overall well-being." },
+              { icon: ShieldCheck, image: "/splimg3.jpeg", title: "Cholesterol Management", desc: "Improve cholesterol levels, support heart health, and reduce the risk of cardiovascular disease with personalized nutrition, heart-healthy eating habits, and sustainable lifestyle changes. Our evidence-based approach helps you achieve lasting results for better long-term health." },
+              { icon: Sparkles, image: "/splimg4.jpeg", title: "Complete Wellness & Weight Management", desc: "Transform your health with personalized nutrition, healthy weight management, and sustainable lifestyle changes. Our holistic approach supports your body and mind, helping you achieve lasting wellness, improved energy, and long-term results." },
             ].map((c, i) => (
               <div
                 key={c.title}
