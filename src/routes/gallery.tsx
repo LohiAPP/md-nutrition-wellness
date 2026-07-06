@@ -1,10 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import g1 from "@/assets/gallery-1.jpg";
-import g2 from "@/assets/gallery-2.jpg";
-import g3 from "@/assets/gallery-3.jpg";
-import g4 from "@/assets/gallery-4.jpg";
-import g5 from "@/assets/gallery-5.jpg";
-import g6 from "@/assets/gallery-6.jpg";
+
 import { FinalCTA } from "@/components/site/CTA";
 
 export const Route = createFileRoute("/gallery")({
@@ -23,13 +18,18 @@ export const Route = createFileRoute("/gallery")({
   component: Gallery,
 });
 
-const ITEMS: { src: string; caption: string; span?: string }[] = [
-  { src: g1, caption: "Healthy meal plating", span: "sm:col-span-2 sm:row-span-2" },
-  { src: g2, caption: "Nutrition consultation" },
-  { src: g3, caption: "Fresh green smoothies" },
-
-  { src: g5, caption: "Whole-food ingredients", span: "sm:col-span-2" },
-  { src: g6, caption: "Wellness group events" },
+const ITEMS: { src: string; caption: string }[] = [
+  { src: "/gallery/1 (1).jpeg", caption: "Clinic Moments" },
+  { src: "/gallery/1 (2).jpeg", caption: "Nutrition Consultation" },
+  { src: "/gallery/1 (3).jpeg", caption: "Healthy Habits" },
+  { src: "/gallery/1 (4).jpeg", caption: "Wellness Checkup" },
+  { src: "/gallery/1 (5).jpeg", caption: "Centre Activities" },
+  { src: "/gallery/1 (6).jpeg", caption: "Expert Guidance" },
+  { src: "/gallery/1 (7).jpeg", caption: "Patient Transformation" },
+  { src: "/gallery/1 (8).jpeg", caption: "Diet Planning" },
+  { src: "/gallery/1 (9).jpeg", caption: "Healthy Living" },
+  { src: "/gallery/1 (10).jpeg", caption: "MD Nutrition Centre" },
+  { src: "/gallery/1 (11).jpeg", caption: "Lifelong Health" },
 ];
 
 function Gallery() {

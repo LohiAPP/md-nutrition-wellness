@@ -114,8 +114,11 @@ function Home() {
         
         <div className="mx-auto max-w-7xl px-5 sm:px-8 text-center relative z-10 pt-8 pb-4 animate-rise">
           <h2 className="font-display text-2xl sm:text-3xl lg:text-4xl font-extrabold text-charcoal">
-            80% Nutrition. 20% Exercise. <span className="text-[#067100]">100% Mindset.</span>
+            Personalized Nutrition for Lifelong Health
           </h2>
+          <p className="mt-4 font-display text-lg sm:text-xl font-bold text-charcoal max-w-3xl mx-auto">
+            80% Nutrition. 20% Exercise. <span className="text-[#067100]">100% Mindset.</span>
+          </p>
           <p className="mt-3 text-sm sm:text-base text-muted-foreground max-w-3xl mx-auto">
             At MD Nutrition Centre, we help you build lifelong healthy habits through personalized nutrition guidance, practical fitness support, and a mindset focused on lasting results.
           </p>
@@ -617,7 +620,7 @@ function Home() {
           </div>
 
           <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-3">
-            {[g1, g2, g3].map((src, i) => (
+            {["/gallery/1 (1).jpeg", "/gallery/1 (2).jpeg", "/gallery/1 (3).jpeg"].map((src, i) => (
               <div
                 key={i}
                 className="overflow-hidden rounded-2xl border border-white/60 bg-white shadow-soft"
