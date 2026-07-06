@@ -153,11 +153,10 @@ function Contact() {
                 <MapPin className="h-5 w-5" />
               </span>
               <div>
-                <p className="text-xs font-semibold uppercase tracking-widest text-muted-foreground">Visit</p>
-                <p className="mt-0.5 font-display text-lg font-bold text-charcoal">{BRAND.city}</p>
-                <p className="mt-1 text-sm text-muted-foreground">
-                  Online and in-person consultations available. We’ll share the exact address when
-                  you confirm your slot.
+                <p className="text-xs font-semibold uppercase tracking-widest text-muted-foreground">Visit Us</p>
+                <p className="mt-0.5 font-display text-lg font-bold text-charcoal">Guntur, Andhra Pradesh, India</p>
+                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                  We offer both <span className="font-medium text-charcoal">online and in-person consultations</span> for your convenience. Once your appointment is confirmed, we'll share the complete nutrition Centre address along with your consultation details.
                 </p>
               </div>
             </div>

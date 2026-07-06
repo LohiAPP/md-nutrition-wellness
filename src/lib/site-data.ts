@@ -9,7 +9,7 @@ export const BRAND = {
   phoneDigits: "919700907707",
   whatsapp: "https://wa.me/919700907707",
   email: "mdnutritioncentre@gmail.com",
-  city: "Guntur, India",
+  city: "Guntur, Andhra Pradesh, India",
 };
 
 export type Service = {
