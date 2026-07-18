@@ -7,7 +7,7 @@ export const BRAND = {
   tagline: "Strong Body. Sharp Mind. Smart Nutrition.",
   phone: "+91 97009 07707",
   phoneDigits: "919700907707",
-  whatsapp: "https://wa.me/919700907707",
+  whatsapp: "https://bit.ly/4eSKHEL",
   email: "mdnutritioncentre@gmail.com",
   city: "Guntur, Andhra Pradesh, India",
 };
@@ -57,7 +57,7 @@ export const SERVICES: Service[] = [
     slug: "pcos-pcod",
     title: "PCOS / PCOD Support",
     description:
-      "Personalized nutrition and lifestyle support for hormonal wellness and better energy.",
+      "Polycystic Ovary Syndrome (PCOS)—often referred to as PCOD—has been officially renamed Polyendocrine Metabolic Ovarian Syndrome (PMOS) Rename please add all places ",
     icon: HeartPulse,
     image: "/service (4).jpeg",
   },

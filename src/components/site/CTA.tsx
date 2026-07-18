@@ -1,15 +1,10 @@
-import { Link } from "@tanstack/react-router";
-import { useState } from "react";
 import { ArrowRight, Phone } from "lucide-react";
 import { BRAND } from "@/lib/site-data";
-import { ContactModal } from "@/components/site/ContactModal";
 
 export function FinalCTA() {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-
   return (
     <>
-      <ContactModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
+
       <section className="mx-auto max-w-7xl px-5 pb-16 sm:px-8">
         <div className="relative overflow-hidden rounded-[2.5rem] bg-[#1F2020] px-6 py-16 text-white shadow-lift sm:px-14 sm:py-20 banner-image">
           <img src="/image4.png" alt="Healthy Lifestyle CTA" className="absolute inset-0" />
@@ -30,12 +25,14 @@ export function FinalCTA() {
             >
               <Phone className="h-5 w-5" /> Call Now
             </a>
-            <button
-              onClick={() => setIsModalOpen(true)}
+            <a
+              href={BRAND.whatsapp}
+              target="_blank"
+              rel="noreferrer"
               className="inline-flex items-center gap-2 rounded-full bg-[#25D366] px-8 py-4 text-sm font-semibold text-white shadow-soft transition-transform hover:-translate-y-0.5"
             >
               WhatsApp Now <ArrowRight className="h-5 w-5" />
-            </button>
+            </a>
           </div>
         </div>
       </div>

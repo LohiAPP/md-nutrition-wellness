@@ -18,13 +18,13 @@ export function Footer() {
             health, better energy, and a confident lifestyle.
           </p>
           <div className="mt-8 flex items-center gap-4">
-            <a href="https://www.facebook.com/mujeeb.wellnesscoach/" target="_blank" rel="noreferrer" className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-white transition-colors hover:bg-primary hover:text-white" aria-label="Facebook">
+            <a href="https://www.facebook.com/mdnutritioncentre/" target="_blank" rel="noreferrer" className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-white transition-colors hover:bg-primary hover:text-white" aria-label="Facebook">
               <Facebook className="h-5 w-5" />
             </a>
-            <a href="https://www.instagram.com/mdnutritioncentre/" target="_blank" rel="noreferrer" className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-white transition-colors hover:bg-primary hover:text-white" aria-label="MD Nutrition Centre Instagram">
+            <a href="https://www.instagram.com/md_nutrition_centre_/" target="_blank" rel="noreferrer" className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-white transition-colors hover:bg-primary hover:text-white" aria-label="MD Nutrition Centre Instagram">
               <Instagram className="h-5 w-5" />
             </a>
-            <a href="https://www.youtube.com/channel/UCn6Hdbop9_dNnaeLMN_jqKg" target="_blank" rel="noreferrer" className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-white transition-colors hover:bg-primary hover:text-white" aria-label="YouTube">
+            <a href="https://youtu.be/ByvxZW5tcJE" target="_blank" rel="noreferrer" className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-white transition-colors hover:bg-primary hover:text-white" aria-label="YouTube">
               <Youtube className="h-5 w-5" />
             </a>
             <a href="https://www.linkedin.com/in/mahammedmujeeb/" target="_blank" rel="noreferrer" className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-white transition-colors hover:bg-primary hover:text-white" aria-label="LinkedIn">

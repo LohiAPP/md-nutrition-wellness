@@ -204,7 +204,7 @@ function Home() {
             <div className="absolute -inset-4 -z-10 rounded-[2.5rem] bg-gradient-to-br from-primary/40 to-accent/30 blur-2xl" />
             <div className="relative mx-auto max-w-md overflow-hidden rounded-[2rem] border-4 border-white/10 bg-gradient-to-b from-white/5 to-transparent shadow-lift image-card">
               <img
-                src="/founder.jpeg"
+                src="/founder3.jpeg"
                 alt="Mahammed Mujeeb — Senior Wellness Coach & Founder of MD Nutrition Centre"
                 loading="lazy"
               />
