@@ -245,7 +245,7 @@ Looking forward to starting my journey!`;
               { icon: Heart, label: "General health and lifestyle upgrade" },
               { icon: Scale, label: "Weight Gain" },
               { icon: Droplet, label: "Diabetes Support" },
-              { icon: HeartPulse, label: "PCOS/PCOD Support" },
+              { icon: HeartPulse, label: "PCOD / PMOS Support" },
               { icon: Brain, label: "Thyroid Care" },
               { icon: Target, label: "Cholesterol / BP Support" },
             ].map((opt) => (

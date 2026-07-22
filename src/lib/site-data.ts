@@ -55,9 +55,9 @@ export const SERVICES: Service[] = [
   },
   {
     slug: "pcos-pcod",
-    title: "PCOS / PCOD Support",
+    title: "PCOD / PMOS Support",
     description:
-      "Polycystic Ovary Syndrome (PCOS)—often referred to as PCOD—has been officially renamed Polyendocrine Metabolic Ovarian Syndrome (PMOS) Rename please add all places ",
+      "Polycystic Ovary Syndrome (PCOS)—often referred to as PCOD—has been officially renamed Polyendocrine Metabolic Ovarian Syndrome (PMOS).",
     icon: HeartPulse,
     image: "/service (4).jpeg",
   },
