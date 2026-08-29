@@ -148,16 +148,39 @@ function Contact() {
               </span>
             </a>
 
-            <div className="flex items-start gap-4 rounded-2xl border border-border bg-ivory p-6 shadow-soft">
-              <span className="grid h-12 w-12 place-items-center rounded-xl bg-white text-primary">
-                <MapPin className="h-5 w-5" />
-              </span>
-              <div>
-                <p className="text-xs font-semibold uppercase tracking-widest text-muted-foreground">Visit Us</p>
-                <p className="mt-0.5 font-display text-lg font-bold text-charcoal">Guntur, Andhra Pradesh, India</p>
-                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                  We offer both <span className="font-medium text-charcoal">online and in-person consultations</span> for your convenience. Once your appointment is confirmed, we'll share the complete nutrition Centre address along with your consultation details.
-                </p>
+            <div className="flex items-start gap-4 rounded-2xl border border-border bg-ivory p-6 shadow-soft sm:flex-row flex-col">
+              <div className="flex items-start gap-4 w-full">
+                <span className="grid h-12 w-12 shrink-0 place-items-center rounded-xl bg-white text-primary">
+                  <MapPin className="h-5 w-5" />
+                </span>
+                <div className="flex-1 w-full">
+                  <p className="text-xs font-semibold uppercase tracking-widest text-muted-foreground">Visit Us</p>
+                  <p className="mt-0.5 font-display text-lg font-bold text-charcoal">MD Nutrition Centre</p>
+                  <p className="mt-1 text-sm leading-relaxed text-muted-foreground">
+                    Guntur, Andhra Pradesh, India
+                  </p>
+                  <a
+                    href="https://maps.app.goo.gl/cgJp4DHoNVzPNeeY7"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="mt-2 inline-block text-sm font-medium text-primary hover:underline"
+                  >
+                    Get Directions &rarr;
+                  </a>
+                  
+                  <div className="mt-4 h-48 w-full overflow-hidden rounded-xl border border-border bg-white">
+                    <iframe
+                      src="https://maps.google.com/maps?q=MD%20NUTRITION%20CENTRE%20Guntur&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                      width="100%"
+                      height="100%"
+                      style={{ border: 0 }}
+                      allowFullScreen
+                      loading="lazy"
+                      referrerPolicy="no-referrer-when-downgrade"
+                      title="MD Nutrition Centre Location"
+                    ></iframe>
+                  </div>
+                </div>
               </div>
             </div>
           </aside>
