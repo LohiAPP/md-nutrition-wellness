@@ -168,7 +168,7 @@ function Contact() {
                     Get Directions &rarr;
                   </a>
                   
-                  <div className="mt-4 h-48 w-full overflow-hidden rounded-xl border border-border bg-white">
+                  <div className="mt-6 h-[300px] sm:h-[400px] w-full overflow-hidden rounded-xl border border-border bg-white shadow-sm">
                     <iframe
                       src="https://maps.google.com/maps?q=MD%20NUTRITION%20CENTRE%20Guntur&t=&z=15&ie=UTF8&iwloc=&output=embed"
                       width="100%"

@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import { Link } from "@tanstack/react-router";
 import { Menu, Phone, X } from "lucide-react";
 import { ContactModal } from "./ContactModal";
-import logo from "@/assets/md-logo.png.asset.json";
 import { BRAND, NAV } from "@/lib/site-data";
 
 export function Header() {
@@ -18,7 +17,7 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-border/60 bg-background/85 backdrop-blur-md">
-      <div className="mx-auto flex h-20 max-w-7xl items-center justify-between gap-4 px-5 sm:px-8">
+      <div className="mx-auto flex h-20 sm:h-24 max-w-7xl items-center justify-between gap-4 px-5 sm:px-8">
         <Link
           to="/"
           className="flex items-center gap-3"
@@ -26,11 +25,11 @@ export function Header() {
           onClick={() => setOpen(false)}
         >
           <img
-            src="/logo.png"
+            src="/LogoMD.png"
             alt={`${BRAND.name} logo`}
-            width={160}
-            height={64}
-            className="h-11 w-auto sm:h-12"
+            width={240}
+            height={96}
+            className="h-14 w-auto sm:h-[4.5rem]"
           />
           <span className="sr-only">{BRAND.name}</span>
         </Link>

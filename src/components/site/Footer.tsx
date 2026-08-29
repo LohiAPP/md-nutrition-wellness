@@ -7,9 +7,10 @@ export function Footer() {
     <footer className="mt-24 border-t border-border bg-charcoal text-white">
       <div className="mx-auto grid max-w-7xl gap-12 px-5 py-16 sm:px-8 lg:grid-cols-4">
         <div className="lg:col-span-2">
-          <div className="inline-flex items-center rounded-2xl bg-white p-3">
-            <img src="/logo.png" alt={`${BRAND.name} logo`} width={200} height={80} className="h-14 w-auto" />
-          </div>
+          <Link to="/" className="inline-block">
+            <img src="/LogoMD.png" alt={`${BRAND.name} logo`} width={400} height={160} className="h-20 w-auto sm:h-28" />
+            <span className="sr-only">{BRAND.name}</span>
+          </Link>
           <p className="mt-6 max-w-md font-display text-xl font-semibold text-white">
             {BRAND.tagline}
           </p>
@@ -79,6 +80,47 @@ export function Footer() {
               <MapPin className="h-4 w-4" /> {BRAND.city}
             </li>
           </ul>
+
+          <h3 className="mt-8 text-sm font-semibold uppercase tracking-widest text-white/60">Legal</h3>
+          <ul className="mt-5 space-y-2.5 text-sm">
+            <li>
+              <Link to="/privacy-policy" className="text-white/85 transition-colors hover:text-white">
+                Privacy Policy
+              </Link>
+            </li>
+            <li>
+              <Link to="/terms" className="text-white/85 transition-colors hover:text-white">
+                Terms & Conditions
+              </Link>
+            </li>
+            <li>
+              <Link to="/health-disclaimer" className="text-white/85 transition-colors hover:text-white">
+                Health Disclaimer
+              </Link>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div className="border-t border-white/10">
+        <div className="mx-auto max-w-7xl px-5 py-10 sm:px-8">
+          <div className="flex flex-col md:flex-row gap-6 items-start justify-between">
+            <div className="w-full">
+              <h3 className="mb-4 text-sm font-semibold uppercase tracking-widest text-white/60">Find Us Here</h3>
+              <div className="h-48 sm:h-64 w-full overflow-hidden rounded-2xl border border-white/10 shadow-sm">
+                <iframe
+                  src="https://maps.google.com/maps?q=MD%20NUTRITION%20CENTRE%20Guntur&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="MD Nutrition Centre Location"
+                ></iframe>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
