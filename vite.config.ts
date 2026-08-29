@@ -11,7 +11,7 @@ export default defineConfig({
       server: { entry: "server" },
     }),
     nitro({
-      preset: "cloudflare-pages",
+      preset: "vercel",
     }),
     react(),
     tailwindcss(),
