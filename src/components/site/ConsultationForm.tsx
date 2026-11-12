@@ -235,7 +235,7 @@ Looking forward to starting my journey!`;
 
       <h3 className="text-base sm:text-lg font-display font-bold text-charcoal mb-3 shrink-0">{currentStepInfo.title}</h3>
 
-      <div className="flex-1 min-h-0 overflow-y-auto hide-scrollbar pb-1">
+      <div className="flex-1 overflow-y-auto pb-1">
         {step === 1 && (
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-1.5">
             {[
