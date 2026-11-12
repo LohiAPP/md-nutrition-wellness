@@ -13,28 +13,28 @@ export function ContactModal({ isOpen, onClose }: { isOpen: boolean; onClose: ()
   if (!isOpen || !mounted) return null;
 
   return createPortal(
-    <div className="fixed inset-0 z-[100] flex items-center justify-center bg-charcoal/60 p-4 backdrop-blur-sm transition-opacity">
-      <div className="relative flex max-h-[90vh] w-full max-w-2xl flex-col overflow-hidden rounded-3xl bg-white shadow-2xl">
+    <div className="fixed inset-0 z-[100] flex items-center justify-center bg-charcoal/60 p-2 sm:p-4 backdrop-blur-sm transition-opacity">
+      <div className="relative flex max-h-[92dvh] sm:max-h-[90dvh] w-full max-w-2xl flex-col overflow-hidden rounded-2xl sm:rounded-3xl bg-white shadow-2xl">
         {/* Modal Header */}
-        <div className="relative shrink-0 bg-gradient-cta p-6 text-white text-center rounded-t-3xl border-b border-white/10">
+        <div className="relative shrink-0 bg-gradient-cta px-4 py-4 sm:p-6 text-white text-center rounded-t-2xl sm:rounded-t-3xl border-b border-white/10">
           <button
             onClick={onClose}
-            className="absolute right-4 top-4 rounded-full bg-white/20 p-2 text-white transition-colors hover:bg-white hover:text-charcoal"
+            className="absolute right-3 top-3 sm:right-4 sm:top-4 rounded-full bg-white/20 p-1.5 sm:p-2 text-white transition-colors hover:bg-white hover:text-charcoal"
             aria-label="Close modal"
           >
-            <X className="h-5 w-5" />
+            <X className="h-4 w-4 sm:h-5 sm:w-5" />
           </button>
-          <p className="text-sm font-semibold uppercase tracking-widest text-white/80 mb-2">MD Nutrition Centre</p>
-          <h2 className="font-display text-2xl font-bold sm:text-3xl">
+          <p className="text-xs sm:text-sm font-semibold uppercase tracking-widest text-white/80 mb-1 sm:mb-2">MD Nutrition Centre</p>
+          <h2 className="font-display text-xl font-bold sm:text-3xl pr-6 sm:pr-0">
             Start Your Transformation! 💪
           </h2>
-          <p className="mt-3 text-sm text-white/90 max-w-md mx-auto">
+          <p className="mt-1.5 sm:mt-3 text-xs sm:text-sm text-white/90 max-w-md mx-auto">
             Tell us about yourself and we’ll create a personalized nutrition and wellness plan for you.
           </p>
         </div>
 
         {/* Modal Body / Form */}
-        <div className="flex flex-1 min-h-0 flex-col overflow-hidden p-5 sm:p-6 bg-white">
+        <div className="flex flex-1 min-h-0 flex-col overflow-hidden p-4 sm:p-6 bg-white">
           <ConsultationForm isPopup={true} />
         </div>
       </div>

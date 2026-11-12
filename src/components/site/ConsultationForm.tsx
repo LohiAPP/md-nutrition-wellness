@@ -469,7 +469,7 @@ Looking forward to starting my journey!`;
         )}
       </div>
 
-      <div className="flex items-center gap-3 mt-4 pt-4 border-t border-border shrink-0">
+      <div className="flex items-center gap-3 mt-2 sm:mt-4 pt-3 sm:pt-4 border-t border-border shrink-0">
         {step > 1 && (
           <button
             onClick={prevStep}
