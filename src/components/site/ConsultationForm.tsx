@@ -266,15 +266,15 @@ Looking forward to starting my journey!`;
         )}
 
         {step === 2 && (
-          <div className="space-y-5">
-            <div className="grid grid-cols-2 gap-4">
+          <div className="space-y-3 sm:space-y-5">
+            <div className="grid grid-cols-2 gap-3 sm:gap-4">
               <div>
-                <label className="block text-sm font-medium text-charcoal mb-1.5">Age</label>
-                <input type="number" value={formData.age} onChange={e => updateForm("age", e.target.value)} className="w-full p-3 rounded-xl border border-border outline-none focus:border-primary" placeholder="Years" />
+                <label className="block text-xs sm:text-sm font-medium text-charcoal mb-1">Age</label>
+                <input type="number" value={formData.age} onChange={e => updateForm("age", e.target.value)} className="w-full p-2.5 sm:p-3 text-sm sm:text-base rounded-xl border border-border outline-none focus:border-primary" placeholder="Years" />
               </div>
               <div>
-                <label className="block text-sm font-medium text-charcoal mb-1.5">Gender</label>
-                <select value={formData.gender} onChange={e => updateForm("gender", e.target.value)} className="w-full p-3 rounded-xl border border-border outline-none focus:border-primary">
+                <label className="block text-xs sm:text-sm font-medium text-charcoal mb-1">Gender</label>
+                <select value={formData.gender} onChange={e => updateForm("gender", e.target.value)} className="w-full p-2.5 sm:p-3 text-sm sm:text-base rounded-xl border border-border outline-none focus:border-primary">
                   <option value="">Select</option>
                   <option value="Male">Male</option>
                   <option value="Female">Female</option>
@@ -282,28 +282,28 @@ Looking forward to starting my journey!`;
                 </select>
               </div>
               <div>
-                <label className="block text-sm font-medium text-charcoal mb-1.5">Weight (kg)</label>
-                <input type="number" step="0.1" value={formData.weight} onChange={e => updateForm("weight", e.target.value)} className="w-full p-3 rounded-xl border border-border outline-none focus:border-primary" placeholder="kg" />
+                <label className="block text-xs sm:text-sm font-medium text-charcoal mb-1">Weight (kg)</label>
+                <input type="number" step="0.1" value={formData.weight} onChange={e => updateForm("weight", e.target.value)} className="w-full p-2.5 sm:p-3 text-sm sm:text-base rounded-xl border border-border outline-none focus:border-primary" placeholder="kg" />
               </div>
               <div>
-                <label className="block text-sm font-medium text-charcoal mb-1.5">Height (cm)</label>
-                <input type="number" step="0.1" value={formData.height} onChange={e => updateForm("height", e.target.value)} className="w-full p-3 rounded-xl border border-border outline-none focus:border-primary" placeholder="cm" />
+                <label className="block text-xs sm:text-sm font-medium text-charcoal mb-1">Height (cm)</label>
+                <input type="number" step="0.1" value={formData.height} onChange={e => updateForm("height", e.target.value)} className="w-full p-2.5 sm:p-3 text-sm sm:text-base rounded-xl border border-border outline-none focus:border-primary" placeholder="cm" />
               </div>
             </div>
 
             {bmiData ? (
-              <div className="mt-6 bg-ivory rounded-2xl p-5 border border-primary/20 flex flex-col sm:flex-row items-center justify-between gap-4">
+              <div className="mt-3 sm:mt-6 bg-ivory rounded-2xl p-3 sm:p-5 border border-primary/20 flex flex-row items-center justify-between gap-3 sm:gap-4">
                 <div>
-                  <p className="text-sm text-muted-foreground">Your BMI is:</p>
-                  <p className="text-3xl font-display font-bold text-primary">{bmiData.bmi}</p>
+                  <p className="text-xs sm:text-sm text-muted-foreground">Your BMI is:</p>
+                  <p className="text-2xl sm:text-3xl font-display font-bold text-primary">{bmiData.bmi}</p>
                 </div>
-                <div className="text-left sm:text-right">
-                  <p className="text-sm text-muted-foreground">BMI Category:</p>
-                  <p className="text-lg font-semibold text-charcoal">{bmiData.category}</p>
+                <div className="text-right">
+                  <p className="text-xs sm:text-sm text-muted-foreground">BMI Category:</p>
+                  <p className="text-sm sm:text-lg font-semibold text-charcoal">{bmiData.category}</p>
                 </div>
               </div>
             ) : (
-              <div className="mt-6 bg-gray-50 rounded-2xl p-5 border border-border text-center text-muted-foreground text-sm">
+              <div className="mt-3 sm:mt-6 bg-gray-50 rounded-2xl p-3 sm:p-5 border border-border text-center text-muted-foreground text-xs sm:text-sm">
                 Enter details to calculate BMI
               </div>
             )}
