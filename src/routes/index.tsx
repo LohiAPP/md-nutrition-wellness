@@ -87,13 +87,32 @@ const WHY = [
 
 function Home() {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [activeSlide, setActiveSlide] = useState(0);
   const carouselRef = useRef<HTMLDivElement>(null);
+  const testimonialSlides = [3, 7, 5, 6, 4, 2];
+
+  const handleCarouselScroll = () => {
+    const el = carouselRef.current;
+    if (!el) return;
+    const maxScroll = el.scrollWidth - el.clientWidth;
+    if (maxScroll <= 0) return;
+    const index = Math.round((el.scrollLeft / maxScroll) * (testimonialSlides.length - 1));
+    setActiveSlide(Math.max(0, Math.min(index, testimonialSlides.length - 1)));
+  };
+
+  const scrollToSlide = (index: number) => {
+    const el = carouselRef.current;
+    if (!el) return;
+    const clamped = Math.max(0, Math.min(index, testimonialSlides.length - 1));
+    const maxScroll = el.scrollWidth - el.clientWidth;
+    const targetLeft = (clamped / (testimonialSlides.length - 1)) * maxScroll;
+    el.scrollTo({ left: targetLeft, behavior: "smooth" });
+    setActiveSlide(clamped);
+  };
 
   const scrollCarousel = (direction: "left" | "right") => {
-    if (carouselRef.current) {
-      const scrollAmount = 340;
-      carouselRef.current.scrollBy({ left: direction === "left" ? -scrollAmount : scrollAmount, behavior: "smooth" });
-    }
+    const nextIndex = direction === "left" ? activeSlide - 1 : activeSlide + 1;
+    scrollToSlide(nextIndex);
   };
 
   return (
@@ -277,9 +296,10 @@ function Home() {
         <div className="mt-12 relative max-w-7xl mx-auto">
           <div 
             ref={carouselRef}
+            onScroll={handleCarouselScroll}
             className="flex gap-6 overflow-x-auto snap-x snap-mandatory hide-scrollbar pb-8 px-5 sm:px-8"
           >
-            {[3, 7, 5, 6, 4, 2].map((num) => (
+            {testimonialSlides.map((num) => (
               <div key={num} className="snap-center shrink-0 w-[280px] sm:w-[320px] rounded-2xl bg-white shadow-soft p-3 flex flex-col items-center justify-center border border-border">
                 <img 
                   src={`/testimonial (${num}).jpeg`} 
@@ -293,19 +313,29 @@ function Home() {
           
           <div className="flex items-center justify-center gap-6 mt-2">
             <button 
+              type="button"
               onClick={() => scrollCarousel('left')} 
-              className="inline-flex items-center gap-2 rounded-full border border-border px-5 py-2.5 text-sm font-semibold text-charcoal hover:bg-white transition-colors shadow-sm"
+              disabled={activeSlide === 0}
+              className="inline-flex items-center gap-2 rounded-full border border-border px-5 py-2.5 text-sm font-semibold text-charcoal hover:bg-white transition-colors shadow-sm disabled:opacity-40 disabled:cursor-not-allowed"
             >
               <ChevronDown className="h-4 w-4 rotate-90" /> Previous
             </button>
-            <div className="flex gap-1.5 hidden sm:flex">
-              {[...Array(6)].map((_, i) => (
-                <div key={i} className={`h-2 w-2 rounded-full ${i === 0 ? 'w-6 bg-accent' : 'bg-border'}`} />
+            <div className="hidden sm:flex items-center gap-1.5">
+              {testimonialSlides.map((_, i) => (
+                <button
+                  key={i}
+                  type="button"
+                  onClick={() => scrollToSlide(i)}
+                  aria-label={`Go to testimonial ${i + 1}`}
+                  className={`h-2 rounded-full transition-all duration-300 ${i === activeSlide ? 'w-6 bg-accent' : 'w-2 bg-border hover:bg-accent/50'}`}
+                />
               ))}
             </div>
             <button 
+              type="button"
               onClick={() => scrollCarousel('right')} 
-              className="inline-flex items-center gap-2 rounded-full border border-accent px-5 py-2.5 text-sm font-semibold text-accent hover:bg-accent/5 transition-colors shadow-sm"
+              disabled={activeSlide === testimonialSlides.length - 1}
+              className="inline-flex items-center gap-2 rounded-full border border-accent px-5 py-2.5 text-sm font-semibold text-accent hover:bg-accent/5 transition-colors shadow-sm disabled:opacity-40 disabled:cursor-not-allowed"
             >
               Next <ChevronDown className="h-4 w-4 -rotate-90" />
             </button>

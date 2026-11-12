@@ -29,7 +29,7 @@ export function Header() {
             alt={`${BRAND.name} logo`}
             width={240}
             height={96}
-            className="h-14 w-auto sm:h-[4.5rem]"
+            className="h-14 w-auto sm:h-[4.5rem] mix-blend-multiply"
           />
           <span className="sr-only">{BRAND.name}</span>
         </Link>

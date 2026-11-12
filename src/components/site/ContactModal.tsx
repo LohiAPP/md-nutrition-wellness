@@ -34,7 +34,7 @@ export function ContactModal({ isOpen, onClose }: { isOpen: boolean; onClose: ()
         </div>
 
         {/* Modal Body / Form */}
-        <div className="flex-1 overflow-hidden p-6 sm:p-8 bg-white">
+        <div className="flex flex-1 min-h-0 flex-col overflow-hidden p-5 sm:p-6 bg-white">
           <ConsultationForm isPopup={true} />
         </div>
       </div>

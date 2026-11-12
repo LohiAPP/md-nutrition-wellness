@@ -218,7 +218,7 @@ Looking forward to starting my journey!`;
   }
 
   return (
-    <div className={`flex flex-col h-full bg-white ${isPopup ? "" : "rounded-3xl shadow-soft border border-border p-3 sm:p-4"}`}>
+    <div className={`flex flex-col flex-1 min-h-0 bg-white ${isPopup ? "" : "rounded-3xl shadow-soft border border-border p-3 sm:p-4"}`}>
       {/* Progress */}
       <div className="mb-3 shrink-0">
         <div className="flex justify-between items-center text-[11px] font-medium mb-1">
@@ -235,7 +235,7 @@ Looking forward to starting my journey!`;
 
       <h3 className="text-base sm:text-lg font-display font-bold text-charcoal mb-3 shrink-0">{currentStepInfo.title}</h3>
 
-      <div className="flex-1 overflow-y-auto hide-scrollbar pb-1">
+      <div className="flex-1 min-h-0 overflow-y-auto hide-scrollbar pb-1">
         {step === 1 && (
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-1.5">
             {[
