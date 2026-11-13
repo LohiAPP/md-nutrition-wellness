@@ -13,9 +13,13 @@ export function ContactModal({ isOpen, onClose }: { isOpen: boolean; onClose: ()
   if (!isOpen || !mounted) return null;
 
   return createPortal(
-    <div className="fixed inset-0 z-[100] flex items-center justify-center bg-charcoal/60 p-2 sm:p-4 backdrop-blur-sm transition-opacity">
-      <div className="relative flex max-h-[90dvh] w-full max-w-2xl flex-col overflow-y-auto rounded-2xl sm:rounded-3xl bg-white shadow-2xl">
-        {/* Modal Header */}
+    <div className="fixed inset-0 z-[100] flex items-end sm:items-center justify-center bg-charcoal/60 p-0 sm:p-4 backdrop-blur-sm transition-opacity">
+      {/* Modal card: on mobile fills bottom 92% of screen, on desktop is centered */}
+      <div
+        className="relative flex flex-col w-full max-w-2xl rounded-t-2xl sm:rounded-3xl bg-white shadow-2xl"
+        style={{ height: "92dvh", maxHeight: "92dvh" }}
+      >
+        {/* Modal Header — always visible at top */}
         <div className="relative shrink-0 bg-gradient-cta px-4 py-3 sm:p-6 text-white text-center rounded-t-2xl sm:rounded-t-3xl border-b border-white/10">
           <button
             onClick={onClose}
@@ -29,12 +33,12 @@ export function ContactModal({ isOpen, onClose }: { isOpen: boolean; onClose: ()
             Start Your Transformation! 💪
           </h2>
           <p className="mt-1 sm:mt-3 text-xs sm:text-sm text-white/90 max-w-md mx-auto leading-snug">
-            Tell us about yourself and we’ll create a personalized nutrition and wellness plan for you.
+            Tell us about yourself and we'll create a personalized nutrition and wellness plan for you.
           </p>
         </div>
 
-        {/* Modal Body / Form */}
-        <div className="flex flex-1 flex-col p-3.5 sm:p-6 bg-white rounded-b-2xl sm:rounded-b-3xl">
+        {/* Modal Body — fills remaining space, form handles internal scroll */}
+        <div className="flex flex-1 flex-col min-h-0 p-3.5 sm:p-6 bg-white rounded-b-2xl sm:rounded-b-3xl overflow-hidden">
           <ConsultationForm isPopup={true} />
         </div>
       </div>

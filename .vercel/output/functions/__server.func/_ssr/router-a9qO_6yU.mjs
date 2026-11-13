@@ -2,13 +2,13 @@ import { r as __toESM } from "../_runtime.mjs";
 import { n as require_jsx_runtime, r as require_react, t as QueryClientProvider } from "../_libs/react+tanstack__react-query.mjs";
 import { E as Facebook, _ as Menu, g as MessageCircle, m as Phone, n as Youtube, r as X, v as MapPin, x as Instagram, y as Linkedin } from "../_libs/lucide-react.mjs";
 import { c as HeadContent, d as Outlet, f as lazyRouteComponent, g as useRouter, h as Link, m as createRootRouteWithContext, p as createFileRoute, s as Scripts, u as createRouter } from "../_libs/@tanstack/react-router+[...].mjs";
-import { n as ContactModal } from "./ContactModal-DcSyb3As.mjs";
+import { n as ContactModal } from "./ContactModal-B0k7RI_M.mjs";
 import { i as SERVICES, r as NAV, t as BRAND } from "./site-data-CBQ7sV2k.mjs";
 import { t as QueryClient } from "../_libs/tanstack__query-core.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/router-Ch246DyW.js
+//#region node_modules/.nitro/vite/services/ssr/assets/router-a9qO_6yU.js
 var import_react = /* @__PURE__ */ __toESM(require_react());
 var import_jsx_runtime = require_jsx_runtime();
-var styles_default = "/assets/styles-DlWWWa7s.css";
+var styles_default = "/assets/styles-Bex9_ynd.css";
 function reportLovableError(error, context = {}) {
 	if (typeof window === "undefined") return;
 	window.__lovableEvents?.captureException?.(error, {
@@ -636,7 +636,7 @@ var Route$8 = createFileRoute("/sitemap.xml")({ server: { handlers: { GET: async
 		"Cache-Control": "public, max-age=3600"
 	} });
 } } } });
-var $$splitComponentImporter$7 = () => import("./services-CtFKgXFb.mjs");
+var $$splitComponentImporter$7 = () => import("./services-CzbMsRQK.mjs");
 var Route$7 = createFileRoute("/services")({
 	head: () => ({ meta: [
 		{ title: "Services — MD Nutrition Centre" },
@@ -728,7 +728,7 @@ var Route$2 = createFileRoute("/contact")({
 	] }),
 	component: lazyRouteComponent($$splitComponentImporter$2, "component")
 });
-var $$splitComponentImporter$1 = () => import("./about-yMK3cOtR.mjs");
+var $$splitComponentImporter$1 = () => import("./about-DCBqwgeU.mjs");
 var Route$1 = createFileRoute("/about")({
 	head: () => ({ meta: [
 		{ title: "About — MD Nutrition Centre" },
@@ -747,7 +747,7 @@ var Route$1 = createFileRoute("/about")({
 	] }),
 	component: lazyRouteComponent($$splitComponentImporter$1, "component")
 });
-var $$splitComponentImporter = () => import("./routes-DFhVsL8H.mjs");
+var $$splitComponentImporter = () => import("./routes-BNHlUIiK.mjs");
 var Route = createFileRoute("/")({
 	head: () => ({ meta: [
 		{ title: "MD Nutrition Centre — Strong Body. Sharp Mind. Smart Nutrition." },

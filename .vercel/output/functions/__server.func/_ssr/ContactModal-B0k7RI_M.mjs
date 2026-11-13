@@ -2,7 +2,7 @@ import { r as __toESM } from "../_runtime.mjs";
 import { n as require_jsx_runtime, r as require_react } from "../_libs/react+tanstack__react-query.mjs";
 import { A as CircleCheck, C as HeartPulse, D as Dumbbell, I as ArrowRight, M as ChevronLeft, O as Droplet, P as Brain, R as Activity, S as Heart, d as Scale, j as ChevronRight, r as X, s as Target, t as Zap } from "../_libs/lucide-react.mjs";
 import { N as require_react_dom } from "../_libs/@tanstack/react-router+[...].mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/ContactModal-DcSyb3As.js
+//#region node_modules/.nitro/vite/services/ssr/assets/ContactModal-B0k7RI_M.js
 var import_react = /* @__PURE__ */ __toESM(require_react());
 var import_jsx_runtime = require_jsx_runtime();
 var import_react_dom = require_react_dom();
@@ -220,7 +220,7 @@ Looking forward to starting my journey!`;
 		className: `flex flex-col flex-1 min-h-0 bg-white ${isPopup ? "" : "rounded-3xl shadow-soft border border-border p-3 sm:p-4"}`,
 		children: [
 			/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-				className: "mb-3 shrink-0",
+				className: "mb-2 shrink-0",
 				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 					className: "flex justify-between items-center text-[11px] font-medium mb-1",
 					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
@@ -239,11 +239,11 @@ Looking forward to starting my journey!`;
 				})]
 			}),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
-				className: "text-base sm:text-lg font-display font-bold text-charcoal mb-3 shrink-0",
+				className: "text-sm sm:text-lg font-display font-bold text-charcoal mb-2 shrink-0",
 				children: currentStepInfo.title
 			}),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-				className: "flex-1 overflow-y-auto pb-1",
+				className: "flex-1 overflow-y-auto min-h-0 pb-2",
 				children: [
 					step === 1 && /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 						className: "grid grid-cols-2 sm:grid-cols-3 gap-1.5",
@@ -605,7 +605,7 @@ Looking forward to starting my journey!`;
 				]
 			}),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-				className: "flex items-center gap-3 mt-2 sm:mt-4 pt-3 sm:pt-4 border-t border-border shrink-0",
+				className: "flex items-center gap-3 mt-2 pt-3 border-t border-border shrink-0",
 				children: [
 					step > 1 && /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
 						onClick: prevStep,
@@ -636,9 +636,13 @@ function ContactModal({ isOpen, onClose }) {
 	}, []);
 	if (!isOpen || !mounted) return null;
 	return (0, import_react_dom.createPortal)(/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-		className: "fixed inset-0 z-[100] flex items-center justify-center bg-charcoal/60 p-2 sm:p-4 backdrop-blur-sm transition-opacity",
+		className: "fixed inset-0 z-[100] flex items-end sm:items-center justify-center bg-charcoal/60 p-0 sm:p-4 backdrop-blur-sm transition-opacity",
 		children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-			className: "relative flex max-h-[90dvh] w-full max-w-2xl flex-col overflow-y-auto rounded-2xl sm:rounded-3xl bg-white shadow-2xl",
+			className: "relative flex flex-col w-full max-w-2xl rounded-t-2xl sm:rounded-3xl bg-white shadow-2xl",
+			style: {
+				height: "92dvh",
+				maxHeight: "92dvh"
+			},
 			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 				className: "relative shrink-0 bg-gradient-cta px-4 py-3 sm:p-6 text-white text-center rounded-t-2xl sm:rounded-t-3xl border-b border-white/10",
 				children: [
@@ -658,11 +662,11 @@ function ContactModal({ isOpen, onClose }) {
 					}),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
 						className: "mt-1 sm:mt-3 text-xs sm:text-sm text-white/90 max-w-md mx-auto leading-snug",
-						children: "Tell us about yourself and we’ll create a personalized nutrition and wellness plan for you."
+						children: "Tell us about yourself and we'll create a personalized nutrition and wellness plan for you."
 					})
 				]
 			}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-				className: "flex flex-1 flex-col p-3.5 sm:p-6 bg-white rounded-b-2xl sm:rounded-b-3xl",
+				className: "flex flex-1 flex-col min-h-0 p-3.5 sm:p-6 bg-white rounded-b-2xl sm:rounded-b-3xl overflow-hidden",
 				children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ConsultationForm, { isPopup: true })
 			})]
 		})

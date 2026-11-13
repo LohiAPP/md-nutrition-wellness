@@ -220,7 +220,7 @@ Looking forward to starting my journey!`;
   return (
     <div className={`flex flex-col flex-1 min-h-0 bg-white ${isPopup ? "" : "rounded-3xl shadow-soft border border-border p-3 sm:p-4"}`}>
       {/* Progress */}
-      <div className="mb-3 shrink-0">
+      <div className="mb-2 shrink-0">
         <div className="flex justify-between items-center text-[11px] font-medium mb-1">
           <span className="text-primary">{currentStepInfo.label}</span>
           <span className="text-muted-foreground">{currentStepInfo.percent}%</span>
@@ -233,9 +233,10 @@ Looking forward to starting my journey!`;
         </div>
       </div>
 
-      <h3 className="text-base sm:text-lg font-display font-bold text-charcoal mb-3 shrink-0">{currentStepInfo.title}</h3>
+      <h3 className="text-sm sm:text-lg font-display font-bold text-charcoal mb-2 shrink-0">{currentStepInfo.title}</h3>
 
-      <div className="flex-1 overflow-y-auto pb-1">
+      {/* Scrollable fields area */}
+      <div className="flex-1 overflow-y-auto min-h-0 pb-2">
         {step === 1 && (
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-1.5">
             {[
@@ -469,7 +470,7 @@ Looking forward to starting my journey!`;
         )}
       </div>
 
-      <div className="flex items-center gap-3 mt-2 sm:mt-4 pt-3 sm:pt-4 border-t border-border shrink-0">
+      <div className="flex items-center gap-3 mt-2 pt-3 border-t border-border shrink-0">
         {step > 1 && (
           <button
             onClick={prevStep}
